@@ -1,0 +1,9 @@
+  <div id="add_user_errors">
+  </div>
+  <%= form_for User.new, :url => add_new_user_path, :html => { :class => "form-inline", :id => "admin_new_user", :data => { remote: true, spinner: "#new_user_spinner"} } do |f| %>
+    <b><%= t(:add_new_user, scope: :'myinfo.titles') -%></b>
+    <%= f.text_field :username, :class =>"input-medium", :placeholder => "Username", :autocomplete => "off", :id => "username" %>
+    <%= f.email_field :email, :class =>"input-medium", :placeholder => "Email", :autocomplete => "off", :id => "email" %>
+     <%= f.text_field :thanxup_id, :class =>"input-medium", :placeholder => "ThanxUp ID", :autocomplete => "off", :id => "email" %>
+    <%= f.submit t(:save, scope: :'myinfo.buttons'), :class => "btn" %>&nbsp;<%= spinner_tag 'admin_new_user_spinner' %>
+  <% end %>

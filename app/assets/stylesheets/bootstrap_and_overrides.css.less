@@ -1,0 +1,69 @@
+@import "twitter/bootstrap/bootstrap";
+@import "twitter/bootstrap/responsive";
+
+@fontAwesomeEotPath: asset-url("fontawesome-webfont.eot");
+@fontAwesomeEotPath_iefix: asset-url("fontawesome-webfont.eot#iefix");
+@fontAwesomeWoffPath: asset-url("fontawesome-webfont.woff");
+@fontAwesomeTtfPath: asset-url("fontawesome-webfont.ttf");
+@fontAwesomeSvgPath: asset-url("fontawesome-webfont.svg#fontawesomeregular");
+@import "fontawesome/font-awesome";
+
+// -------------------------------------------------------------------
+
+// --- > COLORS
+@textColor: #000000;
+
+// --- > FIXES
+
+// deal with icon wierdness
+[class^="icon-"], [class*=" icon-"]{
+  background:none;
+}
+
+// --- > FORMS
+
+// tighten up form spacing a bit
+// careful - may create problem with .help_block bottom
+.form-horizontal {
+  margin: 0;
+  padding: 0;
+  .control-group {
+    margin-bottom: 5px;
+    .clearfix();
+  }
+}
+// align link with input fields
+.form_align_with_input {
+  padding-left: @horizontalComponentOffset;
+}
+// nowrap labels
+.control-label {
+  white-space: nowrap;
+}
+
+// --- > NAV BAR
+
+@navbarLinkBackgroundActive: #FFFFFF;
+@navbarLinkColorActive: #000000;
+@navbarLinkColor: @white;
+@navbarBackgroundHighlight: #329fd6;
+@navbarBackground: #329fd6;
+@navbarLinkColorHover: @white;
+@dropdownLinkBackgroundHover: #329fd6;
+@navbarText: @white;
+
+.navbar .nav > li > a {
+  text-shadow: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.navbar-text > a {
+//  font-size: 85%;
+  color: @navbarText;
+  &:hover {
+    color: @navbarText;
+    text-decoration: underline;
+  }
+}

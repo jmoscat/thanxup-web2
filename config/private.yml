@@ -1,0 +1,26 @@
+# Template file for private.yml
+defaults: &defaults
+    url_host: "example.test"
+    mailer_address: "smtp.gmail.com" # for example, this is godaddy.com
+    mailer_port: 587
+    mailer_domain: "thanxup.com"
+    mailer_user_name: "no-reply-web@thanxup.com"
+    mailer_password: "george144"
+    ga_tracker: "UA-xxxxxxxx-X"
+    ga_tracker_domain: "example.test"
+    twitter_consumer_key: xxxxx # register your application at dev.twitter.co,
+    twitter_consumer_secret: xxxx
+
+development:
+    <<: *defaults
+    # add stuff here to override defaults.
+
+test:
+    <<: *defaults
+
+production:
+    <<: *defaults
+    # add stuff here to override defaults.
+    url_host: "www.example.com"
+    ga_tracker: "UA-xxxxxxxx-X"
+    ga_tracker_domain: "example.com"

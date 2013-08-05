@@ -1,0 +1,45 @@
+<div id="fb_devise_edit_sign_in">
+  <div class="modal-header">
+    <h3><%= t(:edit_account, scope: :'myinfo.titles') -%></h3> 
+  </div>  
+  <div class="modal-body">
+  <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :id => 'edit_user', :class => "form-horizontal", :data => { remote: true, spinner: "#edit_user_spinner"} }) do |f| %>
+
+    <%= devise_error_messages! %>
+
+    <% email = (current_user) ? (current_user.unconfirmed_email.blank? ? current_user.email : current_user.unconfirmed_email) : "" -%>
+
+    <%# TODO: move into partials -%>
+    <% if current_user.provider.present? -%>
+      <%# login via external provider such as twitter -%>
+      <p><small><i><%= t(:provider_unchanged, scope: :'myinfo.devise.messages', :provider => current_user.provider.humanize) -%></i></small></p>
+      <%= f.input :username, :disabled => true, :input_html => { :value => (current_user.username if current_user)} %>
+      <%= f.input :email, :input_html => { :autocomplete => :off, :value => email} %>
+    <% else -%>
+      <%# login local to application -%>
+      <%= f.input :username, :disabled => true, :input_html => { :value => (current_user.username if current_user)} %>
+      <%= f.input :current_password %>
+      <%= f.input :email, :input_html => { :autocomplete => :off, :value => email} %>
+      <%= f.input :password %>
+      <%= f.input :password_confirmation %>    
+    <% end -%>
+
+    <div class="control-group">
+      <div class="controls">
+        <%= f.submit t(:save, scope: :'myinfo.buttons'), :class => "btn" %>&nbsp;<%= spinner_tag 'edit_user_spinner' %>
+      </div>
+    </div>
+    
+    <br />
+    <% if current_user -%>
+      <legend><%= t(:delete_account, scope: :'myinfo.titles') -%></legend>
+      <p><%= t(:delete_message, scope: :'myinfo.devise.messages') -%><br />
+      <%= link_to t(:delete_user_link_title, :username => current_user.username, scope: :'myinfo.devise.buttons'), registration_path(resource_name), :data => { :confirm => t(:confirm, scope: :'myinfo.messages') }, :method => :delete %>
+      <%if current_user.provider.present? -%>
+        <br /><small><i><%= t(:provider_not_deleted, scope: :'myinfo.devise.messages', :provider => current_user.provider.humanize) -%></i></small>
+      <% end -%>
+      </p>
+    <% end -%>
+  <% end -%>
+  </div>
+</div>

@@ -1,0 +1,2 @@
+- Since I didn't use all of the devise features, you'll want to compare the original devise controllers and the overriding inherited controllers for what's missing.
+- Assumes user has Javascript and cookies enabled.

@@ -1,0 +1,46 @@
+<div id="best_in_place_errors"></div>
+
+<table class="table table-hover table-condensed">
+<thead>
+  <tr>
+    <!-- <th>#</th> -->
+    <th><%= t(:username, scope: :'myinfo.headers') -%> <% if current_user.is_admin? -%><i class="icon-edit"><% end -%></i></th>
+    <th><%= t(:email, scope: :'myinfo.headers') -%> <% if current_user.is_admin? -%><i class="icon-edit"><% end -%></i></th>
+    <th><%= t(:role, scope: :'myinfo.headers') -%> <i class="icon-edit"></i></th>
+    <th><%= t(:last_login, scope: :'myinfo.headers') -%></th>
+    <th><%= t(:ip, scope: :'myinfo.headers') -%></th>
+    <th><%= t(:login_count, scope: :'myinfo.headers').html_safe -%></th>
+    <% if current_user.is_admin? -%><th></th><%end -%>
+  </tr>
+</thead>
+<tbody>
+
+<% roles =  (current_user.is_admin?) ? User.role_collection_with_admin : role_collection -%>
+
+<% @users.each do |user| -%>
+  <% not_current = !(user.username == current_user.username) ? true : false -%>
+  <tr>
+    <!-- <td><%= user.id %></td> -->
+    <td><% if user.is_admin? -%><i class="icon-user"></i> <% end -%>
+          <%= best_in_place_if (current_user.is_admin? and not_current), user, :username, :path => update_user_path(:id => user.id) %></td>
+    <td><%= best_in_place_if (current_user.is_admin? and not_current), user, :email, :path => update_user_path(:id => user.id) %></td>
+    <td><%= best_in_place_if not_current, user, :role, :type => :select, :collection => roles, :path => update_user_path(:id => user.id) %></td>
+    <td><%= display_last_login(user) %></td>
+    <td><%= display_last_ip(user) %></td>
+    <td><%= user.sign_in_count if user.sign_in_count > 0 %></td>
+    <% if current_user.is_admin? -%>
+      <td>
+      <% if not_current -%>
+        <%= link_to image_tag("delete_12.png", :alt => "Delete"), delete_user_path(:id => user.id), {:title => t(:warning_deletes_user, scope: :'myinfo.messages'), :rel => :tooltip, :confirm => t(:confirm, scope: :'myinfo.messages'),  :method => :delete, :remote => true} %>
+      <% end -%>
+      </td>
+    <%end -%>
+  </tr>
+<% end -%>
+<tr><td colspan=8><i class="icon-edit"></i> <i><%= t(:click_to_edit_inline, scope: :'myinfo.messages') -%></i></td></tr>
+</tbody>
+</table>
+
+<% if current_user.is_admin? -%>
+  <%= render :partial => 'admin/partials/add_user' %>
+<% end -%>

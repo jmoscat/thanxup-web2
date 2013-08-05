@@ -1,0 +1,20 @@
+<div id="fb_devise_reset_password">
+  <div class="modal-header">  
+    <h3><%= t(:reset_password, scope: :'myinfo.devise.messages') -%></h3> 
+  </div>  
+  <div class="modal-body">
+    <%= t(:reset_password_message, scope: :'myinfo.devise.messages') -%>
+    
+    <%= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post, :id => "reset_pwd", :class => "form-horizontal", :data => { spinner: "#reset_password_spinner"}}) do |f| %>
+  
+      <%= devise_error_messages! %>
+      <%= f.input :username, :input_html => { :autocomplete => :off} %>
+
+      <div class="control-group">
+        <div class="controls">
+          <%= f.submit t(:send_instructions, scope: :'myinfo.devise.buttons'), :class => "btn" %>&nbsp;<%= spinner_tag 'reset_password_spinner' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

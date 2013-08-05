@@ -1,0 +1,12 @@
+// redirect to dashboard if user is on a page and not a lightbox
+
+if(window.location.href.indexOf("<%= edit_user_registration_path -%>") > -1) {
+  <% flash[:notice] = current_msg -%>
+  window.location.replace('<%= dashboard_path -%>');
+} else {
+  $('#flash_messages').html(alert_box('success','y','<%= current_msg %>'));
+  <%- clear_msg %>
+  $(document).trigger('close.facebox');
+}
+
+

@@ -1,0 +1,8 @@
+- The facebox class .close is clashing with another .close class definition, probably bootstrap? Creates a problem with the close option on alert messages displayed inside a facebox modal. Currently, the option has been removed but this needs to be sorted and restored.
+- There is a potential memory leak with bootstrap when working in the Rails development environment. I can't reproduce it at will but it happened twice when I was editing bootstrap assets and doing iterative testing by just refreshing the browser and not restarting the app each time.
+- Background flicker with some of the facebox modal window opens (inconsistent).
+- Action mailer settings are duplicated in development.rb and environment.rb - find somewhere to set them only once.
+- Need to make better usage of bootstrap's fluid container. Also, need to limit bootstrap includes to what's actually used.
+- The current tests are minimal and not behaviour driven. Need to implement a framework for creating real integration testing of the user experience. Some combination of Rspec, Caybara and Selenium?
+- Only tested in latest version of Chrome and Firefox.
+- Need a lot more documentation and tutorials.

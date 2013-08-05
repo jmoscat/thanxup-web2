@@ -1,0 +1,14 @@
+<% title "Dashboard:" %>
+
+        <div class="row">
+          <h1>Rails 3.2 / Devise / Twitter Bootstrap Demonstration Site <%= "<span style='color:red;font-size: 9px;'>(alpha)</span>".html_safe if Rails.env == 'development' -%></h1>
+          <p>
+          Please sign-up and have a look around. Or try "jane", "123123".<br /><br />
+          The source code for this site can be found on github.com: <a class="btn btn-small" href="https://github.com/jehughes/rails3-devise-bootstrap-example" target="_blank">Github Repo <img src="assets/Octocat_tiny.png"></a>
+          </p>
+          <br />
+        </div>
+        <div class="row">
+          <h5>Gem versions:</h5>
+        </div>
+        <%= render :partial => 'dashboard/partials/version' -%>
