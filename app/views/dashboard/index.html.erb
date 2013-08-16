@@ -1,5 +1,22 @@
 <% title "Dashboard:" %>
-
-        <div class="row">
-        <h1> Hello.</h1>
+	<div class="home-container">	
+        <div class="row-fluid">
+          <div class="span6">
+          	<h1 class= "title1">
+          		Graph.
+          	</h1>
+          </div>
+          <div class="span6">
+                 <h1 class= "title1">Discover new metrics.</h1>
+	        <div class="row-fluid">
+	          <div class="span12">
+	          	<ul class="nav nav-pills">
+	  				<li class="active">
+	   		 			<%= link_to t(:login_to_your_dashboard, scope: :'myinfo.menu'), fb_login_path, :remote => true %>
+	  				</li>
+  				</ul>
+	          </div>
+	        </div>
+          </div>
         </div>
+    </div>
