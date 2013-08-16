@@ -38,6 +38,9 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bson (1.9.1)
+    bson_ext (1.9.1)
+      bson (~> 1.9.1)
     builder (3.0.4)
     capistrano (2.15.5)
       highline
@@ -94,6 +97,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.23)
+    mongo (1.9.1)
+      bson (~> 1.9.1)
     multi_json (1.7.7)
     mysql2 (0.3.13)
     net-scp (1.1.2)
@@ -181,6 +186,7 @@ DEPENDENCIES
   best_in_place
   better_errors
   binding_of_caller
+  bson_ext (~> 1.9.1)
   capistrano
   coffee-rails (~> 3.2.1)
   compass-rails
@@ -189,6 +195,7 @@ DEPENDENCIES
   google-analytics-rails
   jquery-rails
   less-rails
+  mongo (~> 1.9.1)
   mysql2
   omniauth-twitter
   rails (= 3.2.13)

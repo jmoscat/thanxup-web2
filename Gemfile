@@ -6,6 +6,8 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
+gem "mongo", "~> 1.9.1"
+gem "bson_ext", "~> 1.9.1"
 
 
 # Gems used only for assets and not required

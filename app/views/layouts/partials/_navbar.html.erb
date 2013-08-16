@@ -4,7 +4,7 @@
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             Menu
           </a>
-          <a class="brand" href="/dashboard">rails3-devise-bootstrap-example</a>
+          <a class="brand" href="/dashboard">ThanxUp Beta dashboard</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="<%= active_tab('dashboard') %>"><%= link_to t(:home, scope: :'myinfo.menu'), dashboard_path %></li>
@@ -34,8 +34,6 @@
                 <%= link_to current_user.username, fb_edit_user_path, :remote => true %>&nbsp;|&nbsp; 
                 <%= link_to t(:logout, scope: :'myinfo.menu'), destroy_user_session_path, :method=>'delete' %> 
               <% else -%>
-                <%= link_to image_tag("sign-in-with-twitter-gray-20.png"), user_omniauth_authorize_path(:twitter) %>
-                &nbsp;&nbsp;
                 <%= link_to t(:login, scope: :'myinfo.menu'), fb_login_path, :remote => true %>&nbsp;|&nbsp;
                 <%= link_to t(:sign_up, scope: :'myinfo.menu'), fb_create_user_path, :remote => true %>
               <% end -%>
