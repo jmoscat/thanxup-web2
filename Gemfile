@@ -8,7 +8,10 @@ gem 'rails', '3.2.13'
 gem 'mysql2'
 gem "mongo", "~> 1.9.1"
 gem "bson_ext", "~> 1.9.1"
+gem 'mongoid'
 
+#Scheduler
+gem 'whenever', :require => false
 
 # Gems used only for assets and not required
 # in production environments by default.

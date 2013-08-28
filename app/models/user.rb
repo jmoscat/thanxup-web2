@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :graphdatas
+  has_many :venues
+  
   # DEVISE
   
   # Include default devise modules. Others available are:
