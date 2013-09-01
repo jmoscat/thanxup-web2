@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_many :venues
-  
+  accepts_nested_attributes_for :venues
   # DEVISE
   
   # Include default devise modules. Others available are:

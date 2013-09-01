@@ -11,6 +11,8 @@ class Stat
   field :loyals, type: String
   index({venue_id: 1},{unique: true, background: true})
 
+
+#"%d-%m-%Y "
   def self.create_connection(server, port,db,user,passw)
   	db = MongoClient.new(server,port).db(db)
   	auth = db.authenticate(user, passw)
