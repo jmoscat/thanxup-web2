@@ -1,6 +1,6 @@
 /* tweak facebox popup window UI */
 #facebox .popup {
-  border:1px solid rgba(0,0,0,0);
+  border:2px solid #92b1cd;
   -webkit-border-radius:0px;
   -moz-border-radius:0px;
   border-radius:0px;
