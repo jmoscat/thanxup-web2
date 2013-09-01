@@ -44,18 +44,18 @@
 // --- > NAV BAR
 
 @navbarLinkBackgroundActive: #FFFFFF;
-@navbarLinkColorActive: #000000;
+@navbarLinkColorActive: #92b1cd;
 @navbarLinkColor: @white;
-@navbarBackgroundHighlight: #329fd6;
-@navbarBackground: #329fd6;
+@navbarBackgroundHighlight: #92b1cd;
+@navbarBackground: #92b1cd;
 @navbarLinkColorHover: @white;
-@dropdownLinkBackgroundHover: #329fd6;
+@dropdownLinkBackgroundHover: #92b1cd;
 @navbarText: @white;
 
 .navbar .nav > li > a {
   text-shadow: none;
   &:hover {
-    text-decoration: underline;
+    text-decoration: bold;
   }
 }
 
@@ -66,4 +66,25 @@
     color: @navbarText;
     text-decoration: underline;
   }
+}
+
+.home-container{
+  padding-top:90px;
+}
+.title1 {
+  font-size: 40px;
+}
+
+.nav-pills > .active > a {
+  color: #ffffff;
+  background-color: #ff6e00;
+}
+
+.nav-pills > .active > a:hover{
+  background-color: @white;
+  color: #ff6e00
+}
+.nav-pills > li {
+  &:hover {
+background-color: @white  }
 }

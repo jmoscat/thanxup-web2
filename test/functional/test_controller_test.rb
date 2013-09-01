@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class GraphdataTest < ActiveSupport::TestCase
+class TestControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end
