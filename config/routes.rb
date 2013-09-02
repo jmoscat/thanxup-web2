@@ -70,6 +70,7 @@ Myinfo::Application.routes.draw do
 
   match '/admin' => 'admin#index'
   match '/dashboard' => 'dashboard#index'
+  match '/status'  => 'status#index'
   match '/help' => 'help#index'
 
   match '/admin/add_new_user' => 'admin#add_new_user', :as => :add_new_user

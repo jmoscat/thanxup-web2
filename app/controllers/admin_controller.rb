@@ -6,7 +6,7 @@ class AdminController < ApplicationController
   end
   
   def index
-    @users = User.order("role,username")
+    @users = User.all.sort(role: 1,username:1)
   end
   
   def add_new_user
@@ -14,7 +14,7 @@ class AdminController < ApplicationController
       pwd = SecureRandom.hex(8) # user will need to use the "forgot password" feature to set a useful password
       options = {:username => params[:user][:username], :email => params[:user][:email], :password => pwd, :password_confirmation => pwd, :role => User.user_role} if params[:user]
       user = User.new(options)
-      user.venues.push(Venue.new(venue_thnx_id: params[:user][:venue][:venue_thnx_id])
+      user.venues.push(Venue.new(venue_thnx_id: params[:user][:venue][:venue_thnx_id]))
       unless (user.save)
         @error_message = user.errors.full_messages.map{|s| s}.join('<br />') if user.errors
         @error_message ||= t(:cannot_save_new_user, :scope => 'myinfo.errors.messages')
@@ -22,7 +22,7 @@ class AdminController < ApplicationController
     else
       @error_message ||= t(:cannot_save_new_user, :scope => 'myinfo.errors.messages')
     end
-    @users = User.order("role,username")
+    @users = User.all.sort(role: 1,username:1)
     respond_to do |format|
       format.html { redirect_to admin_path }
       format.js { render :layout=>false }
@@ -41,7 +41,7 @@ class AdminController < ApplicationController
   def delete_user   
     @user = User.find(params[:id])
     @user.destroy if current_user.is_admin?
-    @users = User.order("role,username")
+    @users = User.all.sort(role: 1,username:1)
     respond_to do |format|
       format.html { redirect_to admin_path }
       format.js { render :layout=>false }
