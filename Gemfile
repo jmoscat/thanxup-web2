@@ -10,6 +10,10 @@ gem 'mongo'
 gem 'bson_ext'
 gem 'mongoid'
 
+
+gem 'morrisjs-rails'
+gem 'raphael-rails'
+
 #Scheduler
 gem 'whenever', :require => false
 

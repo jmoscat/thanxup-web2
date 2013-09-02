@@ -67856,3 +67856,1212 @@ Served asset /delete_12.png - 304 Not Modified (0ms)
 
 Started GET "/assets/spinner.gif" for 127.0.0.1 at 2013-09-02 23:56:46 +0200
 Served asset /spinner.gif - 304 Not Modified (0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-09-03 00:05:17 +0200
+Processing by AdminController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (18.2559ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"$query"=>{"_id"=>"5223aa87151a4b8308000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8068ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"$query"=>{}, "$orderby"=>{"role"=>1, "username"=>1}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.7110ms)
+  Rendered admin/partials/_add_user.html.erb (8.1ms)
+  Rendered admin/partials/_users.html.erb (196.2ms)
+  Rendered admin/index.html.erb within layouts/application (353.5ms)
+Compiled morris.css  (0ms)  (pid 45489)
+Compiled application.css  (101ms)  (pid 45489)
+Compiled raphael.js  (80ms)  (pid 45489)
+Compiled morris.js  (1ms)  (pid 45489)
+Compiled application.js  (225ms)  (pid 45489)
+  Rendered layouts/partials/_navbar.html.erb (3.6ms)
+  Rendered layouts/partials/_footer.html.erb (0.4ms)
+Completed 200 OK in 1671ms (Views: 1498.8ms)
+
+
+Started GET "/assets/morris.css?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /morris.css - 200 OK (8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /application.css - 200 OK (127ms)
+
+
+Started GET "/assets/facebox_custom.css?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /facebox_custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/myinfo.css?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /myinfo.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /jquery.facebox.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /jquery.facebox.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /twitter/bootstrap.js - 304 Not Modified (32ms)
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /best_in_place.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/status.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /status.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/test.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /test.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/common.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /common.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/raphael.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /raphael.js - 200 OK (4ms)
+
+
+Started GET "/assets/morris.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /morris.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /application.js - 200 OK (174ms)
+
+
+Started GET "/assets/spinner.gif" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /spinner.gif - 304 Not Modified (13ms)
+
+
+Started GET "/assets/delete_12.png" for 127.0.0.1 at 2013-09-03 00:05:19 +0200
+Served asset /delete_12.png - 304 Not Modified (37ms)
+
+
+Started GET "/status" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Processing by StatusController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (18.8749ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"$query"=>{"_id"=>"5223aa87151a4b8308000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3831ms)
+  Rendered status/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/partials/_navbar.html.erb (2.0ms)
+  Rendered layouts/partials/_footer.html.erb (0.0ms)
+Completed 200 OK in 88ms (Views: 66.9ms)
+
+
+Started GET "/assets/facebox_custom.css?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /facebox_custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/myinfo.css?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /myinfo.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /twitter/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/test.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /test.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /common.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /best_in_place.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/status.js?body=1" for 127.0.0.1 at 2013-09-03 00:05:21 +0200
+Served asset /status.js - 304 Not Modified (0ms)
+
+
+Started GET "/status" for 127.0.0.1 at 2013-09-03 00:06:16 +0200
+Processing by StatusController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8221ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"$query"=>{"_id"=>"5223aa87151a4b8308000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3538ms)
+  Rendered status/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/partials/_navbar.html.erb (1.9ms)
+  Rendered layouts/partials/_footer.html.erb (0.0ms)
+Completed 200 OK in 158ms (Views: 155.2ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/myinfo.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /myinfo.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox_custom.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /facebox_custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/morris.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /morris.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /twitter/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /common.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/test.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /test.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /best_in_place.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/status.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /status.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/raphael.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /raphael.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/morris.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /morris.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:17 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/status" for 127.0.0.1 at 2013-09-03 00:06:18 +0200
+Processing by StatusController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5919ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"$query"=>{"_id"=>"5223aa87151a4b8308000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4768ms)
+  Rendered status/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/partials/_navbar.html.erb (1.7ms)
+  Rendered layouts/partials/_footer.html.erb (0.0ms)
+Completed 200 OK in 69ms (Views: 64.9ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox_custom.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /facebox_custom.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/myinfo.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /myinfo.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/morris.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /morris.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /twitter/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /best_in_place.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/test.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /test.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/status.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /status.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/raphael.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /raphael.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /common.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/morris.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /morris.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:19 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/status" for 127.0.0.1 at 2013-09-03 00:06:53 +0200
+Processing by StatusController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8759ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"$query"=>{"_id"=>"5223aa87151a4b8308000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4070ms)
+  Rendered status/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/partials/_navbar.html.erb (2.0ms)
+  Rendered layouts/partials/_footer.html.erb (0.0ms)
+Completed 200 OK in 91ms (Views: 84.5ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/morris.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /morris.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/myinfo.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /myinfo.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox_custom.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /facebox_custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /twitter/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /best_in_place.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/status.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /status.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/test.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /test.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /common.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/raphael.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /raphael.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/morris.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /morris.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:54 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/status" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Processing by StatusController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0262ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"$query"=>{"_id"=>"5223aa87151a4b8308000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4427ms)
+  Rendered status/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/partials/_navbar.html.erb (2.1ms)
+  Rendered layouts/partials/_footer.html.erb (0.0ms)
+Completed 200 OK in 156ms (Views: 153.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/myinfo.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /myinfo.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/morris.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /morris.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox_custom.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /facebox_custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /twitter/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /best_in_place.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /common.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/status.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /status.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/test.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /test.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/raphael.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /raphael.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/morris.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /morris.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:56 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/status" for 127.0.0.1 at 2013-09-03 00:06:58 +0200
+Processing by StatusController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"$query"=>{"_id"=>"5223aa87151a4b8308000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3779ms)
+  Rendered status/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/partials/_navbar.html.erb (2.2ms)
+  Rendered layouts/partials/_footer.html.erb (0.0ms)
+Completed 200 OK in 72ms (Views: 69.2ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox_custom.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /facebox_custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/myinfo.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /myinfo.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/morris.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /morris.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /twitter/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /best_in_place.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /common.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/status.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /status.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/test.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /test.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/raphael.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /raphael.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /application.js - 304 Not Modified (146ms)
+
+
+Started GET "/assets/morris.js?body=1" for 127.0.0.1 at 2013-09-03 00:06:59 +0200
+Served asset /morris.js - 304 Not Modified (0ms)
+
+
+Started GET "/status" for 127.0.0.1 at 2013-09-03 00:07:21 +0200
+Processing by StatusController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1489ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"$query"=>{"_id"=>"5223aa87151a4b8308000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4280ms)
+  Rendered status/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/partials/_navbar.html.erb (1.9ms)
+  Rendered layouts/partials/_footer.html.erb (0.0ms)
+Completed 200 OK in 72ms (Views: 68.7ms)
+
+
+Started GET "/assets/facebox_custom.css?body=1" for 127.0.0.1 at 2013-09-03 00:07:21 +0200
+Served asset /facebox_custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/myinfo.css?body=1" for 127.0.0.1 at 2013-09-03 00:07:21 +0200
+Served asset /myinfo.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-03 00:07:21 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-03 00:07:21 +0200
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-09-03 00:07:21 +0200
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:21 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/morris.css?body=1" for 127.0.0.1 at 2013-09-03 00:07:21 +0200
+Served asset /morris.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:21 +0200
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:21 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:21 +0200
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:21 +0200
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:22 +0200
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:22 +0200
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:22 +0200
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:22 +0200
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:22 +0200
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:22 +0200
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:22 +0200
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:22 +0200
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:22 +0200
+Served asset /twitter/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:22 +0200
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:22 +0200
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:22 +0200
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/test.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:22 +0200
+Served asset /test.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:22 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:22 +0200
+Served asset /best_in_place.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:22 +0200
+Served asset /common.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/status.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:22 +0200
+Served asset /status.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/morris.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:22 +0200
+Served asset /morris.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/raphael.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:22 +0200
+Served asset /raphael.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:22 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-09-03 00:07:50 +0200
+Processing by LocalDevise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"T+tS0pehsK+ys6UlPSL/ij7tw1qbIwY9pKDHrPV8efU="}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8111ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"$query"=>{"_id"=>"5223aa87151a4b8308000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3569ms)
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 96ms
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-09-03 00:07:50 +0200
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/partials/_navbar.html.erb (1.3ms)
+  Rendered layouts/partials/_footer.html.erb (0.0ms)
+Completed 200 OK in 86ms (Views: 85.5ms)
+
+
+Started GET "/assets/facebox_custom.css?body=1" for 127.0.0.1 at 2013-09-03 00:07:50 +0200
+Served asset /facebox_custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-03 00:07:50 +0200
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/morris.css?body=1" for 127.0.0.1 at 2013-09-03 00:07:50 +0200
+Served asset /morris.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:50 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/myinfo.css?body=1" for 127.0.0.1 at 2013-09-03 00:07:50 +0200
+Served asset /myinfo.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:50 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-03 00:07:50 +0200
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-09-03 00:07:50 +0200
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:50 +0200
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:50 +0200
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:50 +0200
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:50 +0200
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:50 +0200
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:50 +0200
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:50 +0200
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:50 +0200
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:50 +0200
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:50 +0200
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:50 +0200
+Served asset /twitter/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:50 +0200
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:50 +0200
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:51 +0200
+Served asset /best_in_place.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:51 +0200
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/raphael.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:51 +0200
+Served asset /raphael.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:51 +0200
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/test.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:51 +0200
+Served asset /test.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:51 +0200
+Served asset /bootstrap.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/status.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:51 +0200
+Served asset /status.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:51 +0200
+Served asset /common.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:51 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/morris.js?body=1" for 127.0.0.1 at 2013-09-03 00:07:51 +0200
+Served asset /morris.js - 304 Not Modified (0ms)

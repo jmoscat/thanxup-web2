@@ -13,4 +13,5 @@
  *= require bootstrap_and_overrides
  *= require myinfo
  *= require_self
+ *= require morris
 */
