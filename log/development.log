@@ -67350,3 +67350,509 @@ Served asset /test.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-02 23:32:16 +0200
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-02 23:46:05 +0200
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (144.1ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (11.2410ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"$query"=>{"_id"=>"5223aa87151a4b8308000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5200ms)
+  Rendered layouts/partials/_navbar.html.erb (17.9ms)
+  Rendered layouts/partials/_footer.html.erb (0.5ms)
+Completed 200 OK in 585ms (Views: 584.1ms)
+
+
+Started GET "/assets/myinfo.css?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /myinfo.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/facebox_custom.css?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /facebox_custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /jquery.facebox.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /twitter/bootstrap.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /jquery.facebox.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /best_in_place.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/common.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:06 +0200
+Served asset /common.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/test.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:07 +0200
+Served asset /test.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/status.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:07 +0200
+Served asset /status.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:07 +0200
+Served asset /application.js - 304 Not Modified (25ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-09-02 23:46:10 +0200
+Processing by AdminController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8042ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"$query"=>{"_id"=>"5223aa87151a4b8308000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3641ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"$query"=>{}, "$orderby"=>{"role"=>1, "username"=>1}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.6428ms)
+  Rendered admin/partials/_add_user.html.erb (5.7ms)
+  Rendered admin/partials/_users.html.erb (39.1ms)
+  Rendered admin/index.html.erb within layouts/application (40.7ms)
+  Rendered layouts/partials/_navbar.html.erb (84.5ms)
+  Rendered layouts/partials/_footer.html.erb (0.0ms)
+Completed 200 OK in 238ms (Views: 203.2ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-09-02 23:46:10 +0200
+Served asset /jquery.facebox.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:10 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-02 23:46:10 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-02 23:46:10 +0200
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebox_custom.css?body=1" for 127.0.0.1 at 2013-09-02 23:46:10 +0200
+Served asset /facebox_custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/myinfo.css?body=1" for 127.0.0.1 at 2013-09-02 23:46:10 +0200
+Served asset /myinfo.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:10 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:10 +0200
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:10 +0200
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:10 +0200
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:10 +0200
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:10 +0200
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:10 +0200
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:10 +0200
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:10 +0200
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:10 +0200
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:10 +0200
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:10 +0200
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:10 +0200
+Served asset /twitter/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:10 +0200
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:10 +0200
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:10 +0200
+Served asset /jquery.facebox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:11 +0200
+Served asset /best_in_place.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:11 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:11 +0200
+Served asset /common.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/status.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:11 +0200
+Served asset /status.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/test.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:11 +0200
+Served asset /test.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-02 23:46:11 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/spinner.gif" for 127.0.0.1 at 2013-09-02 23:46:11 +0200
+Served asset /spinner.gif - 304 Not Modified (1ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2013-09-02 23:46:11 +0200
+Served asset /fontawesome-webfont.woff - 304 Not Modified (20ms)
+
+
+Started POST "/admin/add_new_user" for 127.0.0.1 at 2013-09-02 23:49:22 +0200
+Processing by AdminController#add_new_user as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T+tS0pehsK+ys6UlPSL/ij7tw1qbIwY9pKDHrPV8efU=", "user"=>{"username"=>"jorge", "email"=>"jorge@thanxup.com", "venue"=>{"venue_thnx_id"=>"1212324"}}, "commit"=>"Save"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9749ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"$query"=>{"_id"=>"5223aa87151a4b8308000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (11.3900ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"email"=>"jorge@thanxup.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.5422ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"username"=>"jorge"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.3011ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"$query"=>{"confirmation_token"=>"ziKYHgra73qmm4B2scwR"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.4900ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dashboard collection=users documents=[{"_id"=>"522507e2151a4be29d000002", "email"=>"jorge@thanxup.com", "encrypted_password"=>"$2a$10$/LmNW52JedP4lEhHZKVgnu/seZiJCNwrEATAZsPniQUrHIji3K/ju", "sign_in_count"=>0, "username"=>"jorge", "role"=>"user", "thanx"=>"4c57211f1ab3db2e", "updated_at"=>2013-09-02 21:49:22 UTC, "created_at"=>2013-09-02 21:49:22 UTC, "confirmation_token"=>"ziKYHgra73qmm4B2scwR", "confirmation_sent_at"=>2013-09-02 21:49:22 UTC}] flags=[] (0.1678ms)
+  Rendered devise/mailer/confirmation_instructions.html.erb (1.4ms)
+
+Sent mail to jorge@thanxup.com (6170ms)
+Date: Mon, 02 Sep 2013 23:49:24 +0200
+From: myinfo_devise@example.com
+Reply-To: myinfo_devise@example.com
+To: jorge@thanxup.com
+Message-ID: <522507e4e0041_ae793ffe2828c17852463@Jorges-MacBook-Pro.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<p>Hello jorge!</p>
+
+<p>Esta es tu contrase=C3=B1a para poder entrar en tu dashboard: <b>4c572=
+11f1ab3db2e</b>. No olvides cambiarla!</p>
+
+<p>Entra en este link para confirmar tu email:</p>
+<p><a href=3D"http://example.test/users/confirmation?confirmation_token=3D=
+ziKYHgra73qmm4B2scwR">Confirmar email</a></p>
+
+  MOPED: 127.0.0.1:27017 INSERT       database=dashboard collection=venues documents=[{"_id"=>"522507e2151a4be29d000001", "venue_thnx_id"=>"1212324", "user_id"=>"522507e2151a4be29d000002", "updated_at"=>2013-09-02 21:49:31 UTC, "created_at"=>2013-09-02 21:49:31 UTC}] flags=[] (0.1891ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"$query"=>{}, "$orderby"=>{"role"=>1, "username"=>1}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.8419ms)
+  Rendered admin/partials/_add_user.html.erb (4.4ms)
+  Rendered admin/partials/_users.html.erb (13.8ms)
+  Rendered admin/add_new_user.js.erb (17.1ms)
+Completed 200 OK in 8326ms (Views: 76.3ms)
+
+
+Started GET "/assets/delete_12.png" for 127.0.0.1 at 2013-09-02 23:49:31 +0200
+Served asset /delete_12.png - 304 Not Modified (41ms)
+
+
+Started GET "/assets/spinner.gif" for 127.0.0.1 at 2013-09-02 23:49:31 +0200
+Served asset /spinner.gif - 304 Not Modified (0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-09-02 23:56:19 +0200
+Processing by AdminController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4598ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"$query"=>{"_id"=>"5223aa87151a4b8308000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6001ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"$query"=>{}, "$orderby"=>{"role"=>1, "username"=>1}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0228ms)
+  Rendered admin/partials/_add_user.html.erb (10.2ms)
+  Rendered admin/partials/_users.html.erb (66.0ms)
+  Rendered admin/index.html.erb within layouts/application (224.1ms)
+  Rendered layouts/partials/_navbar.html.erb (12.8ms)
+  Rendered layouts/partials/_footer.html.erb (0.5ms)
+Completed 200 OK in 820ms (Views: 800.1ms)
+
+
+Started GET "/assets/facebox_custom.css?body=1" for 127.0.0.1 at 2013-09-02 23:56:20 +0200
+Served asset /facebox_custom.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-02 23:56:20 +0200
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-02 23:56:20 +0200
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-02 23:56:20 +0200
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/myinfo.css?body=1" for 127.0.0.1 at 2013-09-02 23:56:20 +0200
+Served asset /myinfo.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-02 23:56:20 +0200
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-02 23:56:20 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-02 23:56:20 +0200
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-02 23:56:20 +0200
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-02 23:56:20 +0200
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-02 23:56:20 +0200
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-02 23:56:20 +0200
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-02 23:56:20 +0200
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-02 23:56:20 +0200
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-02 23:56:20 +0200
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.facebox.css?body=1" for 127.0.0.1 at 2013-09-02 23:56:21 +0200
+Served asset /jquery.facebox.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-02 23:56:21 +0200
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-02 23:56:21 +0200
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (75ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-02 23:56:21 +0200
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-02 23:56:21 +0200
+Served asset /twitter/bootstrap.js - 304 Not Modified (39ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-02 23:56:21 +0200
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.facebox.js?body=1" for 127.0.0.1 at 2013-09-02 23:56:21 +0200
+Served asset /jquery.facebox.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-02 23:56:21 +0200
+Served asset /bootstrap.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/best_in_place.js?body=1" for 127.0.0.1 at 2013-09-02 23:56:21 +0200
+Served asset /best_in_place.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/test.js?body=1" for 127.0.0.1 at 2013-09-02 23:56:21 +0200
+Served asset /test.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/status.js?body=1" for 127.0.0.1 at 2013-09-02 23:56:21 +0200
+Served asset /status.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/common.js?body=1" for 127.0.0.1 at 2013-09-02 23:56:21 +0200
+Served asset /common.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-02 23:56:21 +0200
+Served asset /application.js - 304 Not Modified (30ms)
+
+
+Started GET "/assets/spinner.gif" for 127.0.0.1 at 2013-09-02 23:56:21 +0200
+Served asset /spinner.gif - 304 Not Modified (1ms)
+
+
+Started GET "/assets/delete_12.png" for 127.0.0.1 at 2013-09-02 23:56:21 +0200
+Served asset /delete_12.png - 304 Not Modified (67ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2013-09-02 23:56:22 +0200
+Served asset /fontawesome-webfont.woff - 304 Not Modified (51ms)
+
+
+Started DELETE "/admin/522507e2151a4be29d000002/delete_user" for 127.0.0.1 at 2013-09-02 23:56:27 +0200
+Processing by AdminController#delete_user as JS
+  Parameters: {"id"=>"522507e2151a4be29d000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (15.8188ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"$query"=>{"_id"=>"5223aa87151a4b8308000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5541ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"_id"=>"522507e2151a4be29d000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4351ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=dashboard collection=users selector={"_id"=>"522507e2151a4be29d000002"} flags=[:remove_first] (0.2120ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"$query"=>{}, "$orderby"=>{"role"=>1, "username"=>1}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.8671ms)
+  Rendered admin/partials/_add_user.html.erb (4.4ms)
+  Rendered admin/partials/_users.html.erb (10.9ms)
+  Rendered admin/delete_user.js.erb (12.8ms)
+Completed 200 OK in 53ms (Views: 27.7ms)
+
+
+Started GET "/assets/spinner.gif" for 127.0.0.1 at 2013-09-02 23:56:27 +0200
+Served asset /spinner.gif - 304 Not Modified (0ms)
+
+
+Started POST "/admin/add_new_user" for 127.0.0.1 at 2013-09-02 23:56:38 +0200
+Processing by AdminController#add_new_user as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T+tS0pehsK+ys6UlPSL/ij7tw1qbIwY9pKDHrPV8efU=", "user"=>{"username"=>"jorge", "email"=>"jorge@thanxup.com", "venue"=>{"venue_thnx_id"=>"324212"}}, "commit"=>"Save"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2710ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"$query"=>{"_id"=>"5223aa87151a4b8308000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4370ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"email"=>"jorge@thanxup.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.4659ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"username"=>"jorge"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.2811ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"$query"=>{"confirmation_token"=>"41E6AjZEvxQGWyyDQerz"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (0.5088ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=dashboard collection=users documents=[{"_id"=>"52250996151a4bc2ab000002", "email"=>"jorge@thanxup.com", "encrypted_password"=>"$2a$10$DorUQRw1d5NU0e4njzQNBeINk2EQZRXs7l8CmO/9JwXmOY8wvczTG", "sign_in_count"=>0, "username"=>"jorge", "role"=>"user", "thanx"=>"2d91c1c3", "updated_at"=>2013-09-02 21:56:38 UTC, "created_at"=>2013-09-02 21:56:38 UTC, "confirmation_token"=>"41E6AjZEvxQGWyyDQerz", "confirmation_sent_at"=>2013-09-02 21:56:38 UTC}] flags=[] (0.2272ms)
+  Rendered devise/mailer/confirmation_instructions.html.erb (1.4ms)
+
+Sent mail to jorge@thanxup.com (3681ms)
+Date: Mon, 02 Sep 2013 23:56:42 +0200
+From: myinfo_devise@example.com
+Reply-To: myinfo_devise@example.com
+To: jorge@thanxup.com
+Message-ID: <5225099a9d28c_b0763ffc73a7cc5477d8@Jorges-MacBook-Pro.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<p>Hello jorge!</p>
+
+<p>Esta es tu contrase=C3=B1a para poder entrar en tu dashboard: <b>2d91c=
+1c3</b>. No olvides cambiarla!</p>
+
+<p>Entra en este link para confirmar tu email:</p>
+<p><a href=3D"http://stats.thanxup.com/users/confirmation?confirmation_to=
+ken=3D41E6AjZEvxQGWyyDQerz">Confirmar email</a></p>
+
+  MOPED: 127.0.0.1:27017 INSERT       database=dashboard collection=venues documents=[{"_id"=>"52250996151a4bc2ab000001", "venue_thnx_id"=>"324212", "user_id"=>"52250996151a4bc2ab000002", "updated_at"=>2013-09-02 21:56:46 UTC, "created_at"=>2013-09-02 21:56:46 UTC}] flags=[] (0.4039ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=dashboard collection=users selector={"$query"=>{}, "$orderby"=>{"role"=>1, "username"=>1}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.8900ms)
+  Rendered admin/partials/_add_user.html.erb (3.8ms)
+  Rendered admin/partials/_users.html.erb (11.4ms)
+  Rendered admin/add_new_user.js.erb (14.2ms)
+Completed 200 OK in 7475ms (Views: 26.2ms)
+
+
+Started GET "/assets/delete_12.png" for 127.0.0.1 at 2013-09-02 23:56:46 +0200
+Served asset /delete_12.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/spinner.gif" for 127.0.0.1 at 2013-09-02 23:56:46 +0200
+Served asset /spinner.gif - 304 Not Modified (0ms)
