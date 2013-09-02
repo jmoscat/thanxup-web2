@@ -1,25 +1,52 @@
-class User < ActiveRecord::Base
-  has_many :venues
-  accepts_nested_attributes_for :venues
-  # DEVISE
-  
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :confirmable,
-  # :lockable, :timeoutable and :omniauthable
-  #devise :database_authenticatable, :registerable,
-  #       :recoverable, :rememberable, :trackable, :validatable
-
-  # Setup accessible (or protected) attributes for your model
-  #attr_accessible :email, :password, :password_confirmation, :remember_me
-  #attr_accessible :title, :body
+class User
+  include Mongoid::Document
+  include Mongoid::Timestamps
 
   devise :database_authenticatable, :registerable, :rememberable, :trackable, :validatable, :recoverable,  :confirmable, :omniauthable
+  
+  ## Database authenticatable
+  field :email,              :type => String, :default => ""
+  field :encrypted_password, :type => String, :default => ""
+  
+  ## Recoverable
+  field :reset_password_token,   :type => String
+  field :reset_password_sent_at, :type => Time
+
+  ## Rememberable
+  field :remember_created_at, :type => Time
+
+  ## Trackable
+  field :sign_in_count,      :type => Integer, :default => 0
+  field :current_sign_in_at, :type => Time
+  field :last_sign_in_at,    :type => Time
+  field :current_sign_in_ip, :type => String
+  field :last_sign_in_ip,    :type => String
+
+  ## Confirmable
+  field :confirmation_token,   :type => String
+  field :confirmed_at,         :type => Time
+  field :confirmation_sent_at, :type => Time
+  field :unconfirmed_email,    :type => String # Only if using reconfirmable
+
+  field :username,             :type => String, :default=> ""
+  field :role,                 :type => String, :default=> "guest"
+  field :provider,             :type => String
+  field :uid,                  :type => String
+  field :image_url,            :type => String
+
+  index({ confirmation_token: 1}, { unique: true, background: true })
+  index({ email: 1 }, { unique: true, background: true })
+  index({ reset_password_token: 1 }, { unique: true, background: true })
+  index({ username: 1 }, { unique: true, background: true })
   attr_accessible :username, :email, :password, :password_confirmation, :remember_me, :role, :image_url
   
   # /DEVISE and OmniAuth
   
   validates :username, :uniqueness => true, :length => { :within => 4..12 }
-  
+  has_many :venues
+  accepts_nested_attributes_for :venues
+
+
   def self.from_omniauth(auth)
     user = where(auth.slice(:provider, :uid)).first_or_create do |new_user|
       new_user.provider = auth.provider
@@ -58,7 +85,7 @@ class User < ActiveRecord::Base
   #end
   
   def self.user_exists_but_email_is_unconfirmed?(username)
-    user = find_by_username(username)
+    user = User.find_by(username: username)
     return user.email_unconfirmed? if user
     false
   end
@@ -68,12 +95,12 @@ class User < ActiveRecord::Base
   end
   
   def self.fetch_email(username)
-    user = self.find_by_username(username) if username
+    user = self.find_by(username: username) if username
     user.email if user
   end
 
   def self.fetch_unconfirmed_email(username)
-    user = self.find_by_username(username) if username
+    user = self.find_by(username: username) if username
     (user.unconfirmed_email.blank? ? user.email : user.unconfirmed_email) if user
   end
 

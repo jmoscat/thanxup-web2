@@ -5,7 +5,7 @@ development:
     default:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-      database: myinfo_development
+      database: dashboard
       # Provides the hosts the default session can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
@@ -51,7 +51,7 @@ development:
 
     # Raise an error when performing a #find and the document is not found.
     # (default: true)
-    # raise_not_found_error: true
+     raise_not_found_error: false
 
     # Raise an error when defining a scope with the same name as an
     # existing method. (default: false)
@@ -69,7 +69,7 @@ development:
 test:
   sessions:
     default:
-      database: myinfo_test
+      database: thanxup_api_test
       hosts:
         - localhost:27017
       options:
@@ -78,3 +78,31 @@ test:
         # low amounts for fast failures.
         max_retries: 1
         retry_interval: 0
+
+production:
+  sessions:
+    default:
+      hosts:
+        - ds059957.mongolab.com:3
+      database: thanxup-prod
+      username: thanxup-prod
+      password: "19032011"
+      options:
+        consistency: :eventual
+        # In the test environment we lower the retries and retry interval to
+        # low amounts for fast failures.
+        max_retries: 1
+        retry_interval: 0
+    replica_set:
+      # This configuration is a 3 node replica set.
+      hosts:
+        - ds033818.mongolab.com:4
+      database: thanxup-prod
+      username: thanxup-prod
+      password: "19032011"
+      # We can set session specific options, like reads executing
+      # on secondary nodes, and defaulting the session to safe mode.
+      options:
+        consistency: :eventual
+  options:
+    raise_not_found_error: false
