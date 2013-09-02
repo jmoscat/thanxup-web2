@@ -14,8 +14,8 @@ class AdminController < ApplicationController
       pwd = SecureRandom.hex(8) # user will need to use the "forgot password" feature to set a useful password
       options = {:username => params[:user][:username], :email => params[:user][:email], :password => pwd, :password_confirmation => pwd, :role => User.user_role} if params[:user]
       user = User.new(options)
-      venue = user.venues.new(venue_thnx_id: params[:user][:venue][:venue_thnx_id])
-      unless (user.save and venue.save)
+      user.venues.push(Venue.new(venue_thnx_id: params[:user][:venue][:venue_thnx_id])
+      unless (user.save)
         @error_message = user.errors.full_messages.map{|s| s}.join('<br />') if user.errors
         @error_message ||= t(:cannot_save_new_user, :scope => 'myinfo.errors.messages')
       end
