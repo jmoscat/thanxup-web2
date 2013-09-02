@@ -6,9 +6,8 @@ gem 'debugger'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
-gem "mongo", "~> 1.9.1"
-gem "bson_ext", "~> 1.9.1"
+gem 'mongo'
+gem 'bson_ext'
 gem 'mongoid'
 
 #Scheduler
