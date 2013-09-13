@@ -1,34 +1,32 @@
 <% title "Data:" %>
-	<div class="container">	
-    <div class="row">
-  <div class="span6">
+	
+
+<hr>
     <div class="graph-container">
       <div class="caption">Jaguar 'E' Type vehicles in the UK</div>
       <div id="graph" class="graph"></div>
     </div>
-  </div>
-  <div class="span6">
+
+
+    <div class="graph-container">
+      <div class="caption">iPhone CPU benchmarks</div>
+      <div id="graph" class="graph"></div>
+    </div>
+
+
+    <div class="graph-container">
+      <div class="caption">Jaguar 'E' Type vehicles in the UK</div>
+      <div id="graph" class="graph"></div>
+    </div>
+
+<div class="row">
+  <div class="span12">
     <div class="graph-container">
       <div class="caption">iPhone CPU benchmarks</div>
       <div id="graph" class="graph"></div>
     </div>
   </div>
 </div>
-<div class="row">
-  <div class="span6">
-    <div class="graph-container">
-      <div class="caption">Quarterly Apple iOS device unit sales</div>
-      <div id="graph" class="graph"></div>
-    </div>
-  </div>
-  <div class="span6">
-    <div class="graph-container">
-      <div class="caption">Donut flavours</div>
-      <div id="graph" class="graph"></div>
-    </div>
-  </div>
-</div>
-    </div>
 
 
 
@@ -36,8 +34,9 @@
 
     <script type="text/javascript">
   // Use Morris.Bar
-  var cupon_t = <%=@cupon.html_safe %>
-Morris.Area({
+  window.onresize = resize;
+  var cupon_t = <%=@cupons_used.html_safe %>
+  cat = Morris.Area({
   element: 'graph',
   behaveLikeLine: true,
   data: cupon_t,  
@@ -45,4 +44,12 @@ Morris.Area({
   ykeys: 'y',
   labels: ['Total Visitas', 'Visitas Recurrentes'],
   xLabelAngle: 60
-});</script>
+});
+  function resize()
+{
+ setTimeout(function(){cat.redraw()},500)
+
+}
+
+
+</script>
