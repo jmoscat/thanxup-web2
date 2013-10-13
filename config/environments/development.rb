@@ -34,6 +34,8 @@ Myinfo::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  new_logger = Logger.new('log/olaqace.log')
   
   config.action_mailer.default_url_options = { :host => PRIVATE_DATA['url_host'] }
   config.action_mailer.perform_deliveries = true

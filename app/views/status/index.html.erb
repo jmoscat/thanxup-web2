@@ -1,55 +1,87 @@
 <% title "Data:" %>
-	
+  <center><h1 class= "title1"> <font color="#ff6e00">-<%= @name %>-</font></h1></center>
 
 <hr>
     <div class="graph-container">
-      <div class="caption">Jaguar 'E' Type vehicles in the UK</div>
-      <div id="graph" class="graph"></div>
+      <div class="caption">Visitas (Checkins)</div>
+      <div id="visits" class="graph"></div>
     </div>
 
 
     <div class="graph-container">
-      <div class="caption">iPhone CPU benchmarks</div>
-      <div id="graph" class="graph"></div>
+      <div class="caption">Cupones Lanzados</div>
+      <div id="cupons_cre" class="graph"></div>
     </div>
 
 
     <div class="graph-container">
-      <div class="caption">Jaguar 'E' Type vehicles in the UK</div>
-      <div id="graph" class="graph"></div>
+      <div class="caption">Cupones Usados</div>
+      <div id="cupons_us" class="graph"></div>
     </div>
 
-<div class="row">
-  <div class="span12">
     <div class="graph-container">
-      <div class="caption">iPhone CPU benchmarks</div>
-      <div id="graph" class="graph"></div>
+      <div class="caption">Cupones Compartidos (min 1 amigo)</div>
+      <div id="cupons_sh" class="graph"></div>
     </div>
-  </div>
-</div>
 
 
 
 
-
-    <script type="text/javascript">
+  <script type="text/javascript">
   // Use Morris.Bar
-  window.onresize = resize;
-  var cupon_t = <%=@cupons_used.html_safe %>
-  cat = Morris.Area({
-  element: 'graph',
-  behaveLikeLine: true,
-  data: cupon_t,  
-  xkey: 'x',
-  ykeys: 'y',
-  labels: ['Total Visitas', 'Visitas Recurrentes'],
-  xLabelAngle: 60
-});
-  function resize()
-{
- setTimeout(function(){cat.redraw()},500)
+    window.onresize = resize;
+    var visit_t = <%=@visits.to_s.html_safe %>;
+    var cupon_created_t = <%=@cupons_created.to_s.html_safe %>;
+    var cupon_used_t = <%=@cupons_used.to_s.html_safe %>;
+    var cupon_shared_t = <%=@cupons_shared.to_s.html_safe %>;
+    cat = Morris.Area({
+      element: 'visits',
+      behaveLikeLine: true,
+      data: visit_t,  
+      xkey: 'x',
+      ykeys: 'y',
+      labels: ['Total Visitas', 'Visitas Recurrentes'],
+      xLabelAngle: 60
+    });
+    
+    cat2 = Morris.Area({
+      element: 'cupons_cre',
+      behaveLikeLine: true,
+      data: cupon_created_t,  
+      xkey: 'x',
+      ykeys: 'y',
+      labels: ['Cupones Lanzados'],
+      xLabelAngle: 60
+    });
 
-}
+    cat3 = Morris.Area({
+      element: 'cupons_us',
+      behaveLikeLine: true,
+      data: cupon_used_t,  
+      xkey: 'x',
+      ykeys: 'y',
+      labels: ['Cupones usados'],
+      xLabelAngle: 60
+    });
+
+    cat3 = Morris.Area({
+      element: 'cupons_sh',
+      behaveLikeLine: true,
+      data: cupon_shared_t,  
+      xkey: 'x',
+      ykeys: 'y',
+      labels: ['Cupones compartidos (min 1 amigo)'],
+      xLabelAngle: 60
+    });
+
+    function resize(){
+      setTimeout(function(){
+        cat.redraw();
+        cat1.redraw();
+        cat2.redraw();
+        cat3.redraw();
+      },500)
+    };
 
 
 </script>

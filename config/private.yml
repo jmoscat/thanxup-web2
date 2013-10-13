@@ -1,6 +1,6 @@
 # Template file for private.yml
 defaults: &defaults
-    url_host: "stats.thanxup.com"
+    url_host: "new2010.es:3001"
     mailer_address: "smtp.gmail.com" # for example, this is godaddy.com
     mailer_port: 587
     mailer_domain: "thanxup.com"

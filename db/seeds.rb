@@ -3,23 +3,23 @@
 
 #User.find_or_create_by_username(:username => "admin", :email => 'admin@example.com', :role => 'admin', :password => '123123', :password_confirmation => '123123')
 
-
+Database.delete_all
 api = Database.new
 api.db_id = 1
 api.source = "api"
-api.server = "ds059957.mongolab.com"
-api.port = 59957
-api.db_name = "thanxup-prod"
-api.user = "thanxup-prod"
-api.password = "19032011"
+api.server = "94.23.32.166"
+api.port = 27017
+api.db_name = "thanxup-api"
+api.user = "thanxup-api-bi"
+api.password = "Freapi1903"
 api.save
 
 cupon = Database.new
 cupon.db_id = 2
 cupon.source = "cupon"
-cupon.server = "ds059957.mongolab.com"
-cupon.port = 59957
+cupon.server = "46.105.16.167"
+cupon.port = 27017
 cupon.db_name = "thanxup-cupon"
-cupon.user = "thanxup-cupon"
-cupon.password = "19032011"
+cupon.user = "thanxup-cupon-bi"
+cupon.password = "BiCup19032011"
 cupon.save
