@@ -21,6 +21,6 @@ test:
 production:
     <<: *defaults
     # add stuff here to override defaults.
-    url_host: "www.example.com"
+    url_host: "new2010.es:3001"
     ga_tracker: "UA-xxxxxxxx-X"
     ga_tracker_domain: "example.com"
