@@ -16,3 +16,5 @@
 //= require jquery.facebox
 //= require best_in_place
 //= require_tree .
+//= require raphael
+//= require morris

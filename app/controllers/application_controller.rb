@@ -3,13 +3,17 @@ class ApplicationController < ActionController::Base
   helper_method :current_msg, :set_msg, :clear_msg, :is_msg?
   
   private
+
+  def after_sign_in_path_for(resource)
+    status_path
+  end
   
   def after_sign_out_path_for(resource_or_scope)
     dashboard_path
   end
  
   def check_access_level(role)
-     redirect_to dashboard_path unless current_user.role_access?(role)
+    redirect_to dashboard_path unless current_user.role_access?(role)
   end
   
   def after_omniauth_failure_path_for(resource)
