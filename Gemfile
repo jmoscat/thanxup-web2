@@ -10,6 +10,10 @@ gem 'mongo'
 gem 'bson_ext'
 gem 'mongoid'
 
+
+gem 'morrisjs-rails'
+gem 'raphael-rails'
+
 #Scheduler
 gem 'whenever', :require => false
 
@@ -43,7 +47,7 @@ gem 'jquery-rails'
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+ gem 'unicorn'
 
 # Deploy with Capistrano
 gem 'capistrano'

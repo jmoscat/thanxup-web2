@@ -7,18 +7,8 @@
           <a class="brand" href="/dashboard"><b>ThanxUp</b> Beta dashboard</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="<%= active_tab('dashboard') %>"><%= link_to t(:home, scope: :'myinfo.menu'), dashboard_path %></li>
               <%- if current_user && current_user.role_access?(User.user_role) %>
-                <li><a href="#"><%= t(:messages, scope: :'myinfo.menu') -%></a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t(:profile, scope: :'myinfo.menu') -%><b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#"><%= t(:details, scope: :'myinfo.menu') -%></a></li>
-                    <li><a href="#"><%= t(:licensing, scope: :'myinfo.menu') -%></a></li>
-                    <li><a href="#"><%= t(:education, scope: :'myinfo.menu') -%></a></li>
-                  </ul>
-                </li>
-                <li><a href="#"><%= t(:reports, scope: :'myinfo.menu') -%></a></li>
+                <li class="<%= active_tab('status') %>"><%= link_to t(:status, scope: :'myinfo.menu'), status_path %></li>
                 <%- if current_user && current_user.role_access?(User.manager_role) %>
                   <li class="<%= active_tab('admin') %>"><%= link_to t(:admin, scope: :'myinfo.menu'), admin_path %></li>
                 <%- end %>
@@ -34,8 +24,8 @@
                 <%= link_to current_user.username, fb_edit_user_path, :remote => true %>&nbsp;|&nbsp; 
                 <%= link_to t(:logout, scope: :'myinfo.menu'), destroy_user_session_path, :method=>'delete' %> 
               <% else -%>
-                <%= link_to t(:login, scope: :'myinfo.menu'), fb_login_path, :remote => true %>&nbsp;|&nbsp;
-                <%= link_to t(:sign_up, scope: :'myinfo.menu'), fb_create_user_path, :remote => true %>
+                <%= link_to t(:login, scope: :'myinfo.menu'), new_user_session_path, :method=>'get'%>&nbsp;<!--|&nbsp;--> 
+                <!--<%= link_to t(:sign_up, scope: :'myinfo.menu'), fb_create_user_path, :remote => true %> --> 
               <% end -%>
               </p>
               </li>

@@ -1,5 +1,6 @@
 <p>Hello <%= @resource.username %>!</p>
 
-<p>Please confirm your new (or updated) account email through the link below:</p>
+<p>Esta es tu contraseña para poder entrar en tu dashboard: <b><%= @resource.thanx %></b>. No olvides cambiarla!</p>
 
-<p><%= link_to 'Confirm my email address', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+<p>Entra en este link para confirmar tu email:</p>
+<p><%= link_to 'Confirmar email', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>

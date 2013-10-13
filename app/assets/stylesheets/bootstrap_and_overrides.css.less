@@ -15,6 +15,12 @@
 
 // --- > FIXES
 
+body { 
+   background-image:url('background.jpg');
+   background-repeat:repeat;
+}
+
+
 // deal with icon wierdness
 [class^="icon-"], [class*=" icon-"]{
   background:none;
@@ -40,6 +46,7 @@
 .control-label {
   white-space: nowrap;
 }
+
 
 // --- > NAV BAR
 
@@ -87,4 +94,25 @@
 .nav-pills > li {
   &:hover {
 background-color: @white  }
+}
+
+.graph-container {
+padding: 30px;
+border: 2px solid #ccc;
+box-shadow: 1px 1px 2.5px #eee;
+margin: 10px 0;
+position: relative;
+background-color:white;
+}
+.graph-container .caption {
+text-align: center;
+}
+
+.graph-container .graph {
+height: 300px;
+}
+
+.container {
+margin-right: auto;
+margin-left: auto;
 }
