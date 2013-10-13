@@ -18,6 +18,6 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-every :day, :at => '7:00 am' do
+every :day, :at => '6:30 am' do
   rake "daily"
 end

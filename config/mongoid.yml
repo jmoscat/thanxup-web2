@@ -5,7 +5,7 @@ development:
     default:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-      database: dashboard
+      database: thanxup_web_dev
       # Provides the hosts the default session can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
@@ -69,7 +69,7 @@ development:
 test:
   sessions:
     default:
-      database: thanxup_api_test
+      database: thanxup_web_stage
       hosts:
         - localhost:27017
       options:
@@ -83,26 +83,18 @@ production:
   sessions:
     default:
       hosts:
-        - ds059957.mongolab.com:3
-      database: thanxup-prod
-      username: thanxup-prod
-      password: "19032011"
+        - localhost:27017
+      database: thanxup-web
+      username: thanxup-web
+      password: "Web219032011"
       options:
         consistency: :eventual
         # In the test environment we lower the retries and retry interval to
         # low amounts for fast failures.
         max_retries: 1
         retry_interval: 0
-    replica_set:
-      # This configuration is a 3 node replica set.
-      hosts:
-        - ds033818.mongolab.com:4
-      database: thanxup-prod
-      username: thanxup-prod
-      password: "19032011"
-      # We can set session specific options, like reads executing
-      # on secondary nodes, and defaulting the session to safe mode.
-      options:
-        consistency: :eventual
   options:
     raise_not_found_error: false
+
+
+
