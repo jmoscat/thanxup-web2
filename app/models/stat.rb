@@ -90,12 +90,12 @@ class Stat
   	all_visits = Stat.hash
   	recurrent_visits = Stat.hash
   	time = Time.now.utc - 1.month
-  	rest = db_handle.collection("venue_visits").find({venue_id: store_id,created_at: {"$gte" => time}},:fields => ["created_at"])
+  	rest = db_handle.collection("venue_visits").find({venue_raw_id: store_id, created_at: {"$gte" => time}},:fields => ["created_at"])
   	rest.to_a.each do |s|
       all_visits[s["created_at"].strftime("%Y-%m-%d")] += 1
 	  end
 
-	rest = db_handle.collection("venue_visits").find({venue_id: store_id,visit_count: {"$gte" => 0},created_at: {"$gte" => time}},:fields => ["created_at"])
+	rest = db_handle.collection("venue_visits").find({venue_raw_id: store_id, visit_count: {"$gte" => 0},created_at: {"$gte" => time}},:fields => ["created_at"])
 	rest.to_a.each do |s|
 	  recurrent_visits[s["created_at"].strftime("%Y-%m-%d")] += 1
 	end
