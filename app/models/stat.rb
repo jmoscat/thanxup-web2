@@ -14,7 +14,7 @@ class Stat
   index({venue_id: 1},{unique: true, background: true})
 
 
-#"%d-%m-%Y "
+#"%d-%m-%Y"
   def self.create_connection(server, port,db,user,passw)
   	db = MongoClient.new(server,port).db(db)
   	auth = db.authenticate(user, passw)
@@ -24,7 +24,7 @@ class Stat
   def self.hash
   	hash_prepared = Hash.new(0)
 	((Date.today - 30.days)..Date.today).each do |s|
-  	  hash_prepared[s.strftime("%Y-%m-%d")] = 0
+  	  hash_prepared[s.strftime("%d-%m-%Y")] = 0
 	end
   	return hash_prepared
   end
@@ -34,7 +34,7 @@ class Stat
   	cupons_created = Stat.hash
 	rest = db_handle.collection("cupons").find({store_id: store_id,created_at: {"$gte" => time}},:fields => ["created_at"])
 	rest.to_a.each do |s|
-	  cupons_created[s["created_at"].strftime("%Y-%m-%d")] += 1
+	  cupons_created[s["created_at"].strftime("%d-%m-%Y")] += 1
 	end
 
 	out = "["
@@ -53,7 +53,7 @@ class Stat
   	time = Time.now.utc - 1.month
   	rest = db_handle.collection("cupons").find({store_id: store_id,used_date: {"$gte" => time}},:fields => ["used_date"])
   	rest.to_a.each do |s|
-		  cupons_redeemed[s["used_date"].strftime("%Y-%m-%d")] += 1
+		  cupons_redeemed[s["used_date"].strftime("%d-%m-%Y")] += 1
   	end
   	out = "["
   	cupons_redeemed.keys.each do |x|
@@ -72,7 +72,7 @@ class Stat
   	time = Time.now.utc - 1.month
   	rest = db_handle.collection("cupons").find({store_id: store_id,shared_date: {"$gte" => time}},:fields => ["shared_date"])
   	rest.to_a.each do |s|
-	    cupons_shared[s["shared_date"].strftime("%Y-%m-%d")] += 2
+	    cupons_shared[s["shared_date"].strftime("%d-%m-%Y")] += 2
 	  end
   	out = "["
   	cupons_shared.keys.each do |x|
@@ -92,12 +92,12 @@ class Stat
     	time = Time.now.utc - 1.month
     	rest = db_handle.collection("venue_visits").find({venue_raw_id: store_id, created_at: {"$gte" => time}},:fields => ["created_at"])
     	rest.to_a.each do |s|
-        all_visits[s["created_at"].strftime("%Y-%m-%d")] += 1
+        all_visits[s["created_at"].strftime("%d-%m-%Y")] += 1
   	  end
 
   	rest = db_handle.collection("venue_visits").find({venue_raw_id: store_id, visit_count: {"$gte" => 0},created_at: {"$gte" => time}},:fields => ["created_at"])
   	rest.to_a.each do |s|
-  	  recurrent_visits[s["created_at"].strftime("%Y-%m-%d")] += 1
+  	  recurrent_visits[s["created_at"].strftime("%d-%m-%Y")] += 1
   	end
 
   	out = "["
