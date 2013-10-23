@@ -87,27 +87,27 @@ class Stat
   end
 
   def self.visits(db_handle, store_id)
-  	all_visits = Stat.hash
-  	recurrent_visits = Stat.hash
-  	time = Time.now.utc - 1.month
-  	rest = db_handle.collection("venue_visits").find({venue_raw_id: store_id, created_at: {"$gte" => time}},:fields => ["created_at"])
+    	all_visits = Stat.hash
+    	recurrent_visits = Stat.hash
+    	time = Time.now.utc - 1.month
+    	rest = db_handle.collection("venue_visits").find({venue_raw_id: store_id, created_at: {"$gte" => time}},:fields => ["created_at"])
+    	rest.to_a.each do |s|
+        all_visits[s["created_at"].strftime("%Y-%m-%d")] += 1
+  	  end
+
+  	rest = db_handle.collection("venue_visits").find({venue_raw_id: store_id, visit_count: {"$gte" => 0},created_at: {"$gte" => time}},:fields => ["created_at"])
   	rest.to_a.each do |s|
-      all_visits[s["created_at"].strftime("%Y-%m-%d")] += 1
-	  end
+  	  recurrent_visits[s["created_at"].strftime("%Y-%m-%d")] += 1
+  	end
 
-	rest = db_handle.collection("venue_visits").find({venue_raw_id: store_id, visit_count: {"$gte" => 0},created_at: {"$gte" => time}},:fields => ["created_at"])
-	rest.to_a.each do |s|
-	  recurrent_visits[s["created_at"].strftime("%Y-%m-%d")] += 1
-	end
-
-	out = "["
-	all_visits.keys.each do |x|
-	  out =  out + "{x: '" + x + "', y: " + all_visits[x].to_s + ", z: " + recurrent_visits[x].to_s+ "}"
-	  if (x!=all_visits.keys.last)
-	    out = out + ","
-	  end
-	end
-	out = out + "]"
+  	out = "["
+  	all_visits.keys.each do |x|
+  	  out =  out + "{x: '" + x + "', y: " + all_visits[x].to_s + ", z: " + recurrent_visits[x].to_s+ "}"
+  	  if (x!=all_visits.keys.last)
+  	    out = out + ","
+  	  end
+  	end
+  	out = out + "]"
 	return out
 
   end
@@ -142,7 +142,7 @@ class Stat
     	  stat_new = Stat.new
     	  stat_new.venue_id = x.venue_thnx_id
         stat_new.name = venue_name
-    	  stat_new.visits = Stat.visits(db_api,x.venue_thnx_id )
+    	  stat_new.visits = Stat.visits(db_api,x.venue_thnx_id)
     	  stat_new.cupon_used = Stat.redeemedCupons(db_cupon, x.venue_thnx_id)
     	  stat_new.cupon_shared = Stat.sharedCupons(db_cupon, x.venue_thnx_id)
     	  stat_new.cupon_created = Stat.createdCupons(db_cupon, x.venue_thnx_id)
