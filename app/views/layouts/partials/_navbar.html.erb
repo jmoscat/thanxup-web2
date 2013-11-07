@@ -9,6 +9,7 @@
             <ul class="nav">
               <%- if current_user && current_user.role_access?(User.user_role) %>
                 <li class="<%= active_tab('status') %>"><%= link_to t(:status, scope: :'myinfo.menu'), status_path %></li>
+                 <li class="<%= active_tab('offer') %>"><%= link_to t(:offer, scope: :'myinfo.menu'), offer_path %></li>
                 <%- if current_user && current_user.role_access?(User.manager_role) %>
                   <li class="<%= active_tab('admin') %>"><%= link_to t(:admin, scope: :'myinfo.menu'), admin_path %></li>
                 <%- end %>

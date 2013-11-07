@@ -1,0 +1,39 @@
+<% title "Elige el establecimiento:" %>
+
+<h1> <font color="#ff6e00">Elige uno de tus establecimientos:</font></h1>
+
+<div id="venue_list">
+
+	<table class="table table-hover table-condensed">
+	<thead>
+	  <tr>
+	    <!-- <th>#</th> -->
+
+	    <th><%= t(:Establecimiento, scope: :'myinfo.headers') -%> <i class="icon-map-marker"></i></th>
+	    <th><%= t(:oferta_activa, scope: :'myinfo.headers') -%> <i class="icon-gift"></i></th>
+	    <th></th>
+	  </tr>
+	</thead>
+	<tbody>
+
+
+
+	<% @venues.each do |venue| -%>
+	  <tr>
+	    <td><%= venue.venue_name %></td>
+	    <td> <% if venue.offer_on %>
+	    	    <font color="green"> Si </font> 
+	    	 <% else -%>
+	    	 	<font color="red"> No </font> 
+	    	<% end -%>
+     	</td>
+     	<td colspan=3><a href=<%= "offer/"+venue.venue_thnx_id+"/edit" %>> <i class="icon-edit"></i></a>  <i><%= t(:Haz_click_para_editar, scope: :'myinfo.messages') -%></i></td>
+	  </tr>
+	<% end -%>
+	</tbody>
+	</table>
+
+</div>
+
+
+
