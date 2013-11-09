@@ -11,6 +11,7 @@ gem 'bson_ext'
 gem 'mongoid'
 
 
+gem 'bootstrap-datepicker-rails'
 gem 'morrisjs-rails'
 gem 'raphael-rails'
 

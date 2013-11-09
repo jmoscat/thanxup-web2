@@ -15,9 +15,6 @@
 	  </tr>
 	</thead>
 	<tbody>
-
-
-
 	<% @venues.each do |venue| -%>
 	  <tr>
 	    <td><%= venue.venue_name %></td>
@@ -27,7 +24,7 @@
 	    	 	<font color="red"> No </font> 
 	    	<% end -%>
      	</td>
-     	<td colspan=3><a href=<%= "offer/"+venue.venue_thnx_id+"/edit" %>> <i class="icon-edit"></i></a>  <i><%= t(:Haz_click_para_editar, scope: :'myinfo.messages') -%></i></td>
+     	<td colspan=3><a href=<%= "offer/"+venue.venue_thnx_id+"/myoffers" %>> <i class="icon-edit"></i></a>  <i><%= t(:Haz_click_para_editar, scope: :'myinfo.messages') -%></i></td>
 	  </tr>
 	<% end -%>
 	</tbody>

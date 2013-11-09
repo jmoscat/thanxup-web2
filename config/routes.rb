@@ -78,7 +78,8 @@ Myinfo::Application.routes.draw do
   match '/admin/:id/delete_user' => 'admin#delete_user', :as => :delete_user
 
   match '/offer' => 'offer#index'
-  match '/offer/:id/edit' => 'offer#update_offer', :as => :update_offer
+  match '/offer/:id/myoffers' => 'offer#myoffers'
+  match '/offer/:id/edit' => 'offer#edit', :as => :edit_offer
 
   match '/facebox/fb_edit_user' => 'facebox#fb_edit_user', :as => :fb_edit_user
   match '/facebox/fb_create_user' => 'facebox#fb_create_user', :as => :fb_create_user
