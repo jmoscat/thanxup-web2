@@ -10,6 +10,8 @@ class Offer
 
   def self.setoffer (params)
   	url = "http://localhost:3000/back/setoffer"
-  	respond =  RestClient.post url, {params}.to_json, :content_type => :json, :accept => :json
+  	debugger
+  	respond =  RestClient.post url, params.to_json, :content_type => :json, :accept => :json
   	return  respond
+  end
 end

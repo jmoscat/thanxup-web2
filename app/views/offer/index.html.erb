@@ -15,6 +15,7 @@
 	  </tr>
 	</thead>
 	<tbody>
+	
 	<% @venues.each do |venue| -%>
 	  <tr>
 	    <td><%= venue.venue_name %></td>
@@ -31,7 +32,7 @@
      		<% else -%>
 	     			<a href=<%= "offer/"+venue.venue_thnx_id+"/myoffers" %>> <i class="icon-zoom-in"></i> <i><%= t(:Ver, scope: :'myinfo.messages') -%></i></a> |
 		     		<a href=<%= "offer/"+venue.venue_thnx_id+"/edit" %>> <i class="icon-edit"></i> <i><%= t(:Nueva, scope: :'myinfo.messages') -%></i></a>  |  
-		     		<a href=<%= "offer/"+venue.venue_thnx_id+"/myoffers" %> onclick="return confirm('Are you sure?')" > <i class="icon-remove"></i> <i><%= t(:Eliminar, scope: :'myinfo.messages') -%></i> </a>  </td>
+		     		<a href=<%= "offer/"+venue.venue_thnx_id+"/myoffers" %> onclick="return confirm('Seguro que quieres eliminar la oferta?')" > <i class="icon-remove"></i> <i><%= t(:Eliminar, scope: :'myinfo.messages') -%></i> </a>  </td>
      		<% end -%>
 	  </tr>	
 	<% end -%>

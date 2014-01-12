@@ -44,7 +44,7 @@
 
 <div id="formBody" >
   <div id="form1"  style="display:none">
-    <%=form_tag('/sendoffer', :method => :post, :class => "well horizontal", :id => "offer_form")%>
+    <%=form_tag('/offer/setoffer', :method => :post, :class => "well horizontal", :id => "offer_form")%>
       <fieldset>
         <legend><font color="#808080"><i class="icon-pencil"></i></font><font color="#808080"> Introduce la nueva Oferta Descuento: </font></legend>
 
@@ -75,7 +75,8 @@
           <label><b>5- Quieres que el cupon sea social (al compartir con tres amigos recibe otro cupón descuento)?</b></label>
           <div class="checkbox">
             <label>
-              <%= check_box_tag 'social', '1', false%>  <a href="#"  id = tooltop rel="tooltip" title="SOCIAL: Por compartir con tres amigos, tu le das otro cupon  INDIVIDUAL: Cupón no se puede compartir ">Cupón SOCIAL?:</a>
+          
+              <%= check_box("social", "1",{} ,"1", "0")%>  <a href="#"  id = tooltop rel="tooltip" title="SOCIAL: Por compartir con tres amigos, tu le das otro cupon  INDIVIDUAL: Cupón no se puede compartir ">Cupón SOCIAL?:</a>
             </label>
           </div>      
           <div id="subform" class ="well horizontal">
@@ -93,14 +94,16 @@
                 </div>
           </div>
           <script type="text/javascript">
-            checkDisplay("social", "subform");
+            checkDisplay("social_1", "subform");
           </script>
       </fieldset>
+    <%= submit_tag("Crear Oferta") %>
+
     </form>
   </div>
 
   <div id="form2"  style="display:none">
-    <%=form_tag('/sendoffer', :method => :post, :class => "well horizontal", :id => "offer_form")%>
+    <%=form_tag('/offer/setoffer', :method => :post, :class => "well horizontal", :id => "offer_form")%>
       <fieldset>
         <legend><font color="#808080"><i class="icon-pencil"></i></font><font color="#808080"> Introduce la nueva Oferta Regalo: </font></legend>
           
@@ -136,7 +139,7 @@
           <label><b>6- Quieres que el cupon sea social (al compartir con tres amigos recibe otro cupón descuento)?</b></label> 
           <div class="checkbox2">
             <label>
-              <%= check_box_tag 'social2', '1', false%>  <a href="#"  id = tooltop rel="tooltip" title="SOCIAL: Por compartir con tres amigos, tu le das otro cupon  INDIVIDUAL: Cupón no se puede compartir ">Cupón SOCIAL?: </a>
+              <%= check_box_tag 'social2', '1','0'%>  <a href="#"  id = tooltop rel="tooltip" title="SOCIAL: Por compartir con tres amigos, tu le das otro cupon  INDIVIDUAL: Cupón no se puede compartir ">Cupón SOCIAL?: </a>
             </label>
           </div>      
           <div id="subform2" class ="well horizontal">
@@ -157,6 +160,7 @@
             checkDisplay("social2", "subform2");
           </script>
       </fieldset>
+      <%= submit_tag("Crear Oferta") %>
     </form>
   </div>
 
