@@ -9,45 +9,30 @@
 			};
 			check.onclick();
 		};
+
+    jQuery(function ($) {
+        $("a").tooltip()
+    });
 	</script>
 </head>
-<h2> <font color="#808080"><i class="icon-gift"></i>  Oferta Checkin: </font><font color="#ff6e00"> <%= @venue.venue_name %></font></h2>
-<p> A continuacion aparecen todos los detalles de la oferta actualmente activa</p>
-<body>	
-<hr>
-	<div class="container-fluid">
-		<div class="row-fluid">
-			<div class="row"><div class="span8"><b>Descripcion oferta:  </b> Recibe ererererere</div></div>
-			<div class="row"><div class="span8"><b>Post Facebook en muro:  </b> Recibe ererererere</div></div>
-			<div class="row-fluid">
-				<div class="row">
-				  <div class="span6"><h3><i class="icon-qrcode"></i>  Cupon1</h3>
-				  	<div class="row-fluid"><div class="span12"><b>Cupon texto:  </b> Recibe croquetas</div></div>
-				  	<div class="row-fluid"><div class="span12"><b>Influencia Min:  </b> 10%</div></div>
-				  	<div class="row-fluid"><div class="span12"><b>Validez desde:  </b> 02-03-2012</div></div>
-				  	<div class="row-fluid"><div class="span12"><b>Validez hasta:  </b> 05-03-2012</div></div>
-				  	<div class="row-fluid"><div class="span12"><b>Tipo:  </b> SOCIAL</div></div>
-				  	<div class="row-fluid"><div class="span12"><a href="#" rel="tooltip" title="Cupon que reciben tus clientes al compartir Cupon1 con tres amigos."><b>-Cupon Social:  </b></a> Recibe ererererere</div></div>
-				  	<div class="row-fluid"><div class="span12"><b>-Cupon Social Validez desde:  </b> Recibe ererererere</div></div>
-				  	<div class="row-fluid"><div class="span12"><b>-Cupon Social Validez desde:  </b> Recibe ererererere</div></div>
-				  </div>
-				  <div class="span6"><h3><i class="icon-qrcode"></i>  Cupon2</h3>
-				  	<div class="row-fluid"><div class="span12"><b>Cupon texto:  </b> Recibe croquetas</div></div>
-				  	<div class="row-fluid"><div class="span12"><b>Influencia Min:  </b> 10%</div></div>
-				  	<div class="row-fluid"><div class="span12"><b>Validez desde:  </b> 02-03-2012</div></div>
-				  	<div class="row-fluid"><div class="span12"><b>Validez hasta:  </b> 05-03-2012</div></div>
-				  	<div class="row-fluid"><div class="span12"><b>Tipo:  </b> INDIVIDUAL</div></div>
-				  </div> 
-				</div>
 
-			</div>
-		</div>			
+<p> A continuacion aparecen todos los detalles procesados de la oferta actualmente activa que has creado</p>
+	<div class="container-fluid">
+	  <div class = "well horizontal">
+		<div class="row-fluid">
+		    <div class="span12"><h2> <font color="#808080"><i class="icon-qrcode"></i>  Oferta Checkin: </font><font color="#ff6e00"> <%= @venue.venue_name %></font></h2><hr id = "offer_hr"></div>
+
+		    <div class="row-fluid"><div class="span12"><b>Descripcion oferta:  </b> Descuento del 40% en todas las bebidas</div>
+		    <div class="row-fluid"><div class="span12"><b>Post Facebook en muro:  </b> I love ThanxUp</div>
+		  	<div class="row-fluid"><div class="span12"><b>Texto del Cupón:  </b>Descuento del 40% en todas las bebidas </div></div>
+		  	<div class="row-fluid"><div class="span12"><b>Influencia Minima para conseguir descuento:  </b> 10%</div></div>
+		  	<div class="row-fluid"><div class="span12"><b>Validez cupón desde:  </b> 02-03-2012</div></div>
+		  	<div class="row-fluid"><div class="span12"><b>Validez cupón hasta:  </b> 05-03-2012</div></div>
+		  	<div class="row-fluid"><div class="span12"><a href="#"  id = tooltop rel="tooltip" title="SOCIAL: Por compartir con tres amigos, tu le das otro cupon  INDIVIDUAL: Cupón no se puede compartir "><b>Tipo: </a></b></b> SOCIAL</div></div>
+		  	<div class="row-fluid"><div class="span12"><a href="#"  id = tooltop rel="tooltip" title="Cupon que reciben tus clientes al compartir Cupon1 con tres amigos."><b>-Cupon Social:  </b></a> Comparte con tres amigos y llevate una comida gratis</div></div>
+		  	<div class="row-fluid"><div class="span12"><b>-Cupon Social Validez desde:  </b> Recibe ererererere</div></div>
+		  	<div class="row-fluid"><div class="span12"><b>-Cupon Social Validez desde:  </b> Recibe ererererere</div></div>
+		</div>
 	</div>
-	<input type="checkbox" id="check" />
-	<form id="form">
-		<input type="checkbox" /><input type="text" />
-	</form>
-	<script type="text/javascript">
-	checkDisplay("check", "form");
-	</script>
-</body>
+	</div>			
+

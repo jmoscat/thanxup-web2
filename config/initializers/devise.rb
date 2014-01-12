@@ -23,7 +23,7 @@ Devise.setup do |config|
   # session. If you need permissions, you should implement that in a before filter.
   # You can also supply a hash where the value is a boolean determining whether
   # or not authentication should be aborted when the value is not present.
-
+  config.secret_key = 'dccf43fb49c65a797625dd852fe86efe3cb58cbd6912b6c6aec871d68c536012a11b41a33cc9ee98b84fde89db90f7cb8798f735cccd8d14d30886488a1df9af'
   config.authentication_keys = [ :username ]
 
   # Configure parameters from the request object used for authentication. Each entry

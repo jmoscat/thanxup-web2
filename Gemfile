@@ -9,7 +9,7 @@ gem 'debugger'
 gem 'mongo'
 gem 'bson_ext'
 gem 'mongoid'
-
+gem 'rest-client', "~> 1.6.7"
 
 gem 'bootstrap-datepicker-rails'
 gem 'morrisjs-rails'

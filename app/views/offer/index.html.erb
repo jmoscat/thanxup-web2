@@ -24,8 +24,16 @@
 	    	 	<font color="red"> No </font> 
 	    	<% end -%>
      	</td>
-     	<td colspan=3><a href=<%= "offer/"+venue.venue_thnx_id+"/myoffers" %>> <i class="icon-edit"></i></a>  <i><%= t(:Haz_click_para_editar, scope: :'myinfo.messages') -%></i></td>
-	  </tr>
+
+     	<td colspan=3>
+     		<% if venue.offer_on %>
+     			<a href=<%= "offer/"+venue.venue_thnx_id+"/myoffers" %>> <i class="icon-edit"></i></a>  <i><%= t(:Haz_click_para_editar, scope: :'myinfo.messages') -%></i></td>
+     		<% else -%>
+	     			<a href=<%= "offer/"+venue.venue_thnx_id+"/myoffers" %>> <i class="icon-zoom-in"></i> <i><%= t(:Ver, scope: :'myinfo.messages') -%></i></a> |
+		     		<a href=<%= "offer/"+venue.venue_thnx_id+"/edit" %>> <i class="icon-edit"></i> <i><%= t(:Nueva, scope: :'myinfo.messages') -%></i></a>  |  
+		     		<a href=<%= "offer/"+venue.venue_thnx_id+"/myoffers" %> onclick="return confirm('Are you sure?')" > <i class="icon-remove"></i> <i><%= t(:Eliminar, scope: :'myinfo.messages') -%></i> </a>  </td>
+     		<% end -%>
+	  </tr>	
 	<% end -%>
 	</tbody>
 	</table>

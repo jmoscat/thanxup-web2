@@ -77,7 +77,7 @@ Myinfo::Application.routes.draw do
   match '/admin/:id/update_user' => 'admin#update_user', :as => :update_user
   match '/admin/:id/delete_user' => 'admin#delete_user', :as => :delete_user
 
-  match '/offer' => 'offer#index'
+  match '/offer' => 'offer#index', :as => :offers
   match '/offer/:id/myoffers' => 'offer#myoffers'
   match '/offer/:id/edit' => 'offer#edit', :as => :edit_offer
 
