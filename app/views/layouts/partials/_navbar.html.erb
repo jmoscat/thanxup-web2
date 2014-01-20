@@ -25,7 +25,7 @@
                 <%= link_to current_user.username, fb_edit_user_path, :remote => true %>&nbsp;|&nbsp; 
                 <%= link_to t(:logout, scope: :'myinfo.menu'), destroy_user_session_path, :method=>'delete' %> 
               <% else -%>
-                <%= link_to t(:L, scope: :'myinfo.menu'), new_user_session_path, :method=>'get'%>&nbsp;<!--|&nbsp;--> 
+                <%= link_to t(:Login, scope: :'myinfo.menu'), new_user_session_path, :method=>'get'%>&nbsp;<!--|&nbsp;--> 
                 <!--<%= link_to t(:sign_up, scope: :'myinfo.menu'), fb_create_user_path, :remote => true %> --> 
               <% end -%>
               </p>
