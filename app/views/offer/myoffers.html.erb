@@ -1,0 +1,47 @@
+<head>
+	<title>Checkbox</title>
+	<script type="text/javascript">
+		var checkDisplay = function(check, form) { //check ID, form ID
+			form = document.getElementById(form), check = document.getElementById(check);
+			check.onclick = function(){
+				form.style.display = (this.checked) ? "none" : "block";
+				form.reset();
+			};
+			check.onclick();
+		};
+
+    jQuery(function ($) {
+        $("a").tooltip()
+    });
+	</script>
+</head>
+
+<p> A continuacion aparecen todos los detalles procesados de la oferta actualmente activa que has creado</p>
+	<div class="container-fluid">
+	  <div class = "well horizontal">
+		<div class="row-fluid">
+		    <div class="span12"><h2> <font color="#808080"><i class="icon-qrcode"></i>  Oferta Checkin: </font><font color="#ff6e00"> <%= @venue.venue_name %></font></h2><hr id = "offer_hr"></div>
+
+		    <div class="row-fluid"><div class="span12"><b>Descripcion oferta:  </b> <%= @respond["offer_text"] %></div>
+		    <% if @respond["offer_kind"]=="1" %>
+		   		<div class="row-fluid"><div class="span12"><b>Tipo de oferta:  </b> DESCUENTO</div>
+		   	<% else %>
+		   		<div class="row-fluid"><div class="span12"><b>Tipo de oferta:  </b> REGALO</div>
+		   	<% end %>
+
+
+		    <div class="row-fluid"><div class="span12"><b>Post checkin en Facebook del cliente:  </b>  <%= @respond["fb_post"] %></div>
+		  	<div class="row-fluid"><div class="span12"><b>Validez cupón desde:  </b> <%= @respond["cupon_valid_from"] %></div></div>
+		  	<div class="row-fluid"><div class="span12"><b>Validez cupón hasta:  </b> <%= @respond["cupon_valid_until"] %></div></div>
+		  	<% if @respond["kind"]=="SHA" %>
+			  	<div class="row-fluid"><div class="span12"><a href="#"  id = tooltop rel="tooltip" title="SOCIAL: Por compartir con tres amigos, tu le das otro cupon"><b>Social?: </a></b> CUPON SOCIAL</div></div>	  	
+			  	<div class="row-fluid"><div class="span12"><a href="#"  id = tooltop rel="tooltip" title="Cupon que reciben tus clientes al compartir cupon oferta con tres amigos."><b>-Cupon Social:  </b></a> <%= @respond["social_text"] %></div></div>
+			  	<div class="row-fluid"><div class="span12"><b>-Cupon Social Validez desde:  </b> <%= @respond["social_from"] %></div></div>
+			  	<div class="row-fluid"><div class="span12"><b>-Cupon Social Validez desde:  </b> <%= @respond["social_until"] %></div></div>
+			<% else %>
+			  	<div class="row-fluid"><div class="span12"><a href="#"  id = tooltop rel="tooltip" title="INDIVIDUAL: Cupón no se puede compartir "><b>Social?: </a></b> CUPON INDIVIDUAL</div></div>	  
+			<% end -%>
+		</div>
+	</div>
+	</div>			
+

@@ -57,7 +57,7 @@ class Stat
   	end
   	out = "["
   	cupons_redeemed.keys.each do |x|
-  	  out =  out + "{x: " + x + ", y: " + cupons_redeemed[x].to_s + "}"
+  	  out =  out + "{x: '" + x + "', y: " + cupons_redeemed[x].to_s + "}"
   	  if (x!=cupons_redeemed.keys.last)
   	    out = out + ","
   	  end
@@ -76,7 +76,7 @@ class Stat
 	  end
   	out = "["
   	cupons_shared.keys.each do |x|
-  	  out =  out + "{x: " + x + ", y: " + cupons_shared[x].to_s + "}"
+  	  out =  out + "{x: '" + x + "', y: " + cupons_shared[x].to_s + "}"
   	  if (x!=cupons_shared.keys.last)
   	    out = out + ","
   	  end

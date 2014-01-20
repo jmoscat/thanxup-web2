@@ -18,3 +18,4 @@
 //= require_tree .
 //= require raphael
 //= require morris
+//= require bootstrap-datepicker

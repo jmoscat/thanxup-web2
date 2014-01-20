@@ -71,11 +71,21 @@ Myinfo::Application.routes.draw do
   match '/admin' => 'admin#index'
   match '/dashboard' => 'dashboard#index'
   match '/status'  => 'status#index'
+  match '/status/:id/stat' => 'status#stat'
   match '/help' => 'help#index'
 
   match '/admin/add_new_user' => 'admin#add_new_user', :as => :add_new_user
   match '/admin/:id/update_user' => 'admin#update_user', :as => :update_user
   match '/admin/:id/delete_user' => 'admin#delete_user', :as => :delete_user
+
+  match '/offer' => 'offer#index'
+  match '/offer/:id/myoffers' => 'offer#myoffers'
+  match '/offer/:id/edit' => 'offer#edit', :as => :edit_offer
+  match '/offer/setoffer' => 'offer#setoffer'
+  match '/offer/getoffer' => 'offer#getoffer'
+  match '/offer/:id/delete' => 'offer#delete'
+
+
 
   match '/facebox/fb_edit_user' => 'facebox#fb_edit_user', :as => :fb_edit_user
   match '/facebox/fb_create_user' => 'facebox#fb_create_user', :as => :fb_create_user

@@ -9,7 +9,7 @@
     </div>
     <%= f.input :username, :input_html => { :autocomplete => :off} %>
     <%= f.input :password %>
-    <%= link_to t(:forgot_password, scope: :'myinfo.buttons'), fb_reset_password_path, :remote => true, :class => 'form_align_with_input' %>
+    <%= link_to t(:Olvidaste_tu_contraseña?, scope: :'myinfo.buttons'), fb_reset_password_path, :remote => true, :class => 'form_align_with_input' %>
     <div class="control-group">
       <div class="controls">
         <input type="checkbox" checked> <%= t(:remember_me, scope: :'myinfo.buttons') -%><br /><br />
