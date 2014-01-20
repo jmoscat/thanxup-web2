@@ -1,6 +1,14 @@
 class StatusController < ApplicationController
   before_filter :authenticate_user!
   def index
+  	@venues = current_user.venues
+
+  end
+
+
+
+
+  def stat
   	id = current_user.venues.last.venue_thnx_id
   	@name = Stat.where(venue_id: id).last.name
   	@cupons_created = Stat.where(venue_id: id).last.cupon_created

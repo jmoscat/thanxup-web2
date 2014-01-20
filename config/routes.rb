@@ -82,6 +82,8 @@ Myinfo::Application.routes.draw do
   match '/offer/:id/edit' => 'offer#edit', :as => :edit_offer
   match '/offer/setoffer' => 'offer#setoffer'
   match '/offer/getoffer' => 'offer#getoffer'
+  match '/offer/:id/delete' => 'offer#delete'
+
 
 
   match '/facebox/fb_edit_user' => 'facebox#fb_edit_user', :as => :fb_edit_user

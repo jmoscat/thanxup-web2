@@ -17,14 +17,33 @@ class OfferController < ApplicationController
 
   def setoffer
   	@respond = Offer.setoffer(params)
-  	if @respond == "1"
+  	if JSON.parse(@respond)["status"] == "1"
   		venue = Venue.find_by(venue_thnx_id: params[:venue_id])
   		venue.offer_on = true
   		venue.save
-    	flash[:notice] = t(:Oferta_guardada)
+    	flash[:notice] = "Oferta guardada ;)"
+		 url = "/offer/"+params[:venue_id] +"/myoffers"
+		 redirect_to url
     else
-        flash[:error] = t(:ha_habido_un_error_al_guardar_oferta)
+        flash[:error] = "Ha habido un error al guardar la oferta, por favor vuelve a intentarlo"
+        url = "/offer/"+params[:venue_id] +"/edit"
+        redirect_to url
     end
-  	redirect_to offer_path
   end
+
+  def delete
+  	respond = Offer.delete_offer(params[:id])
+  	if respond["status"] == "1"
+  		venue = Venue.find_by(venue_thnx_id: params[:id])
+  		venue.offer_on = false
+  		venue.save
+  		flash[:notice] = "Oferta borrada"
+  		redirect_to "/offer"
+  	else
+  		flash[:error] = "Ha habido un error al borrar la oferta, vuelve a intentarlo"
+  		redirect_to "/offer"
+  	end
+  end
+
+
 end

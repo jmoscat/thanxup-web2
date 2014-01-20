@@ -9,12 +9,12 @@
             <ul class="nav">
               <%- if current_user && current_user.role_access?(User.user_role) %>
                 <li class="<%= active_tab('status') %>"><%= link_to t(:status, scope: :'myinfo.menu'), status_path %></li>
-                 <li class="<%= active_tab('offer') %>"><%= link_to t(:offer, scope: :'myinfo.menu'), offer_path %></li>
+                 <li class="<%= active_tab('Ofertas') %>"><%= link_to t(:ofertas, scope: :'myinfo.menu'), offer_path %></li>
                 <%- if current_user && current_user.role_access?(User.manager_role) %>
                   <li class="<%= active_tab('admin') %>"><%= link_to t(:admin, scope: :'myinfo.menu'), admin_path %></li>
                 <%- end %>
               <%- end %>
-              <li class="<%= active_tab('help') %>"><%= link_to t(:help, scope: :'myinfo.menu'), help_path %></li>
+              <li class="<%= active_tab('Ayuda') %>"><%= link_to t(:Ayuda, scope: :'myinfo.menu'), help_path %></li>
             </ul>
             <ul class="nav pull-right">
               <li>
@@ -25,7 +25,7 @@
                 <%= link_to current_user.username, fb_edit_user_path, :remote => true %>&nbsp;|&nbsp; 
                 <%= link_to t(:logout, scope: :'myinfo.menu'), destroy_user_session_path, :method=>'delete' %> 
               <% else -%>
-                <%= link_to t(:login, scope: :'myinfo.menu'), new_user_session_path, :method=>'get'%>&nbsp;<!--|&nbsp;--> 
+                <%= link_to t(:L, scope: :'myinfo.menu'), new_user_session_path, :method=>'get'%>&nbsp;<!--|&nbsp;--> 
                 <!--<%= link_to t(:sign_up, scope: :'myinfo.menu'), fb_create_user_path, :remote => true %> --> 
               <% end -%>
               </p>

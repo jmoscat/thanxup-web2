@@ -34,6 +34,9 @@
       check.onclick();
     };
     checkDisplay("check", "sub_form");
+    $("#form1").validate();
+    $("#form2").validate();
+
 </script>
 
 <p> Elije el tipo de oferta que quieres crear...</p>
@@ -51,24 +54,24 @@
           <%= hidden_field_tag "offer_kind", "1" %>
           <%= hidden_field_tag "venue_id", @venue_id %>
 
-          <label><a href="#"  id = tooltop rel="tooltip" title="El usuario recibira un descuento proporcion a su influencia"><b>1- Descuento maximo que quieres ofrecer. </b></a></label>
-          <%= select_tag(:discount_max,  options_for_select((0..100).step(5).to_a.map{|s| ["#{s}%", s]}))%>
+          <label><a href="#"  id = tooltop rel="tooltip" title="El cliente recibira un descuento proporcion a su influencia"><b>1- Descuento maximo que quieres ofrecer. </b></a></label>
+          <%= select_tag(:discount_max ,options_for_select((0..100).step(5).to_a.map{|s| ["#{s}%", s]}))%>
           </br></br>  
 
           <label><b>2- Especifica en que producto/s quieres ofrece el descuento?</b></label>
-          <%= text_field_tag 'discount_thing', 'Ej: Gintonics/Toda la carta ', :maxlength => 140%></b>
+          <%= text_field_tag 'discount_thing', 'Ej: Gintonics/Toda la carta ', :maxlength => 140, :class =>"input-xxlarge",:required => true%></b>
           </br></br>
 
-          <label><b>3- Que post aparece en Facebook cuando el usuario hace checkin</b></label>
-          <%= text_field_tag 'fb_post', 'Ej: Una excelente comida en Bar Cool ', :maxlength => 140%>
+          <label><b>3- Que post aparece en Facebook cuando el cliente hace checkin</b></label>
+          <%= text_field_tag 'fb_post', 'Ej: Una excelente comida en Bar Cool ', :maxlength => 140,:class =>"input-xxlarge", :required => true%>
           </br></br>
 
-          <label><b>4- Validez del cupon que  recibe el usuario</b></label>
+          <label><b>4- Validez del cupon que  recibe el cliente</b></label>
             <div class="input-daterange" id="datepicker">
                 <span>Desde</span>
-              <input type="text" class="input-small" name="cupon_valid_from" data-behaviour='datepicker' >
+              <input type="text" class="input-small" name="cupon_valid_from" data-behaviour='datepicker' required>
                 <span>hasta</span>
-              <input type="text" class="input-small" name="cupon_valid_until" data-behaviour='datepicker' />
+              <input type="text" class="input-small" name="cupon_valid_until" data-behaviour='datepicker' required/>
             </div>
           </br>
 
@@ -83,14 +86,14 @@
            <legend><font color="#0057b8"><i class="icon-share"></i></font><font color="#0057b8"> Información cupón social</font></legend>
               
               <label><b>5a- Qué nueva oferta se llevan tus clientes por compartir el cupón con amigos?</label>
-              <%= text_field_tag 'social_text', 'Ej: Una copa gratis por compartir! ', :maxlength => 140%></b>
+              <%= text_field_tag 'social_text', 'Ej: Una copa gratis por compartir! ', :maxlength => 140,:class =>"input-xxlarge" ,:required => true%></b>
               
               <label><b>5b- Validez del nuevo cupon que recibe el usuario</b></label>
                 <div class="input-daterange" id="datepicker">
                     <span>Desde</span>
-                  <input type="text" class="input-small" name="social_from" data-behaviour='datepicker' >
+                  <input type="text" class="input-small" name="social_from" data-behaviour='datepicker'>
                     <span>hasta</span>
-                  <input type="text" class="input-small" name="social_until" data-behaviour='datepicker' />
+                  <input type="text" class="input-small" name="social_until" data-behaviour='datepicker'/>
                 </div>
           </div>
           <script type="text/javascript">
@@ -111,53 +114,48 @@
           <%= hidden_field_tag "venue_id", @venue_id %>
 
           <label><b>1- Que quieres regalar?</b></label>
-          <%= text_field_tag 'gift_thing', 'Ej: Un Gintonic gratis', :maxlength => 140%>
+          <%= text_field_tag 'gift_thing', 'Ej: Un Gintonic gratis', :maxlength => 140, :required => true%>
           </br></br>
 
           <label><b>2- A partir de que nivel de influencia se consigue el cupón para el regalo?</b></label>
           <%= select_tag(:gift_min_inf,  options_for_select((1..100).to_a.map{|s| ["#{s}%", s]}))%>
           </br></br>
 
-          <label><b>3- Que post aparece en Facebook cuando el usuario hace checkin</b></label>
-          <%= text_field_tag 'fb_post', 'Ej: Una excelente comida en Bar Cool ', :maxlength => 140%>
+          <label><b>3- Que post aparece en Facebook cuando el cliente hace checkin</b></label>
+          <%= text_field_tag 'fb_post', 'Ej: Una excelente comida en Bar Cool ', :maxlength => 140 ,:class =>"input-xxlarge" ,:required => true%>
           </br></br>
-          
-          <label><b>4- Post que quieres que aparezca en el muro de Facebook de tu cliente</b></label>
-          <%= text_field_tag 'fb_post', 'Ej ', :maxlength => 140%>
-          </br></br></b>
 
-
-          <label><b>5- Validez del cupon que recibe el usuario</b></label>
+          <label><b>4- Validez del cupon que cliente el usuario</b></label>
             <div class="input-daterange" id="datepicker">
                 <span>Desde</span>
-              <input type="text" class="input-small" name="cupon_valid_from" data-behaviour='datepicker' >
+              <input type="text" class="input-small" name="cupon_valid_from" data-behaviour='datepicker' required >
                 <span>hasta</span>
-              <input type="text" class="input-small" name="cupon_valid_until" data-behaviour='datepicker' />
+              <input type="text" class="input-small" name="cupon_valid_until" data-behaviour='datepicker' required />
             </div>
           </br>
 
-          <label><b>6- Quieres que el cupon sea social (al compartir con tres amigos recibe otro cupón descuento)?</b></label> 
+          <label><b>5- Quieres que el cupon sea social (al compartir con tres amigos recibe otro cupón descuento)?</b></label> 
           <div class="checkbox2">
             <label>
-              <%= check_box_tag 'social2', '1','0'%>  <a href="#"  id = tooltop rel="tooltip" title="SOCIAL: Por compartir con tres amigos, tu le das otro cupon  INDIVIDUAL: Cupón no se puede compartir ">Cupón SOCIAL?: </a>
+              <%= check_box("social", "2",{} ,"1", "0")%>  <a href="#"  id = tooltop rel="tooltip" title="SOCIAL: Por compartir con tres amigos, tu le das otro cupon&#013;INDIVIDUAL: Cupón no se puede compartir ">Cupón SOCIAL?:</a>
             </label>
           </div>      
           <div id="subform2" class ="well horizontal">
            <legend><font color="#0057b8"><i class="icon-share"></i></font><font color="#0057b8"> Información cupón social </font></legend>
               
-              <label><b>6a- Qué nueva oferta se llevan tus clientes por compartir el cupón con amigos?</label>
-              <%= text_field_tag 'social_text', 'Ej: Una copa gratis por compartir! ', :maxlength => 140%></b>
+              <label><b>5a- Qué nueva oferta se llevan tus clientes por compartir el cupón con amigos?</label>
+              <%= text_field_tag 'social_text', 'Ej: Una copa gratis por compartir! ', :maxlength => 140,:class =>"input-xxlarge", :required => true%></b>
               
-              <label><b>6b- Validez del nuevo cupon que recibe el usuario</b></label>
+              <label><b>5b- Validez del nuevo cupon que recibe el usuario</b></label>
                 <div class="input-daterange" id="datepicker">
                     <span>Desde</span>
                   <input type="text" class="input-small" name="social_from" data-behaviour='datepicker' >
                     <span>hasta</span>
-                  <input type="text" class="input-small" name="social_until" data-behaviour='datepicker' />
+                  <input type="text" class="input-small" name="social_until" data-behaviour='datepicker'/>
                 </div>
           </div>
           <script type="text/javascript">
-            checkDisplay("social2", "subform2");
+            checkDisplay("social_2", "subform2");
           </script>
       </fieldset>
       <%= submit_tag("Crear Oferta") %>
