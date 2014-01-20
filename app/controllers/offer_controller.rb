@@ -2,7 +2,11 @@ class OfferController < ApplicationController
   before_filter :authenticate_user!
   
   def index
-  	@venues = current_user.venues
+    if current_user.role_access?(User.manager_role)
+      @venues = Venue.all
+    else
+  	  @venues = current_user.venues
+    end
   end
 
   def myoffers
