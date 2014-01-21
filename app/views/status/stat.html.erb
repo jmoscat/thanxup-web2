@@ -1,26 +1,26 @@
 <% title "Data:" %>
   <center><h1 class= "title1"> <font color="#ff6e00">-<%= @name %>-</font></h1></center>
-
 <hr>
+  <p> A continuacion aparecen la actividad de tus usarios en los ultimos 30 dias:</p>
     <div class="graph-container">
-      <div class="caption">Visitas (Checkins)</div>
+      <div class="caption"><b>Visitas (Checkins)</b></div>
       <div id="visits" class="graph"></div>
     </div>
 
 
     <div class="graph-container">
-      <div class="caption">Cupones Lanzados</div>
+      <div class="caption"><b>Cupones Lanzados</b></div>
       <div id="cupons_cre" class="graph"></div>
     </div>
 
 
     <div class="graph-container">
-      <div class="caption">Cupones Usados</div>
+      <div class="caption"><b>Cupones Usados</b></div>
       <div id="cupons_us" class="graph"></div>
     </div>
 
     <div class="graph-container">
-      <div class="caption">Cupones Compartidos (min 1 amigo)</div>
+      <div class="caption"><b>Cupones Compartidos (min 1 amigo)</b></div>
       <div id="cupons_sh" class="graph"></div>
     </div>
 
@@ -41,6 +41,13 @@
       xkey: 'x',
       ykeys: ['y','z'],
       labels: ['Total Visitas', 'Visitas Recurrentes'],
+      xLabelFormat: function(x) {
+          return x.getDate()+'-'+(x.getMonth()+1)+'-'+x.getFullYear(); 
+          },
+      dateFormat: function(x) {
+          d = new Date(x);
+          return d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear(); 
+          },
       xLabelAngle: 60
     });
     
@@ -51,6 +58,13 @@
       xkey: 'x',
       ykeys: 'y',
       labels: ['Cupones Lanzados'],
+      xLabelFormat: function(x) {
+          return x.getDate()+'-'+(x.getMonth()+1)+'-'+x.getFullYear(); 
+          },
+      dateFormat: function(x) {
+          d = new Date(x);
+          return d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear(); 
+          },
       xLabelAngle: 60
     });
 
@@ -61,6 +75,13 @@
       xkey: 'x',
       ykeys: 'y',
       labels: ['Cupones usados'],
+      xLabelFormat: function(x) {
+          return x.getDate()+'-'+(x.getMonth()+1)+'-'+x.getFullYear(); 
+          },
+      dateFormat: function(x) {
+          d = new Date(x);
+          return d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear(); 
+          },
       xLabelAngle: 60
     });
 
@@ -71,6 +92,13 @@
       xkey: 'x',
       ykeys: 'y',
       labels: ['Cupones compartidos (min 1 amigo)'],
+      xLabelFormat: function(x) {
+          return x.getDate()+'-'+(x.getMonth()+1)+'-'+x.getFullYear(); 
+          },
+      dateFormat: function(x) {
+          d = new Date(x);
+          return d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear(); 
+          },
       xLabelAngle: 60
     });
 
